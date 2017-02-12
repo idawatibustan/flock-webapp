@@ -11,16 +11,14 @@
     </a>
 </div>
 
-
+<div style="padding-left:10px">
 <h2>{{ data.question_title }}</h2>
-
 <div class="meta">
     <i>February 11, 2017, at 9:35 PM</i>
 </div>
+</div>
 
 <div class="ui comments">
-
-
     {% for answer in data.answers: %}
     <div class="ui segment">
         <div class="comment">
@@ -30,16 +28,11 @@
                     <div style="float:right;"><i>Today at 5:42 PM</i></div>
                 </div>
                 <div class="text">
-
                     {{ answer }}
-
                 </div>
             </div>
         </div>
     </div>
     {% endfor %}
-
-
-
 </div>
 {% endblock %}
