@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for, request, session, redirect
 from gevent.wsgi import WSGIServer
+from pprint import pprint
 from settings import *
 import os
 import json
@@ -9,66 +10,72 @@ app.secret_key = os.urandom(24).encode("hex")
 
 @app.route("/", methods=["GET", "POST"])
 def home():
-    return redirect(url_for("ask"))
+    # TODO: kyle - check if redirect is still a problem, if so shift to /ask
+    session['data'] = dict(request.args)
+    print json.dumps(session['data'], indent=4)
+    return redirect(url_for("questions"))
 
-@app.route("/ask")
-def ask():
-    session["data"] = dict(request.args)
-    print json.dumps(session["data"], indent=4)
+@app.route("/questions")
+def questions():
+    # TODO: kyle
+    questions = get_questions(user_id, is_answered = False)
     return render_template("ask.html", data={})
 
-@app.route("/answer")
-def answer():
+@app.route("/answers")
+def answers():
+    # TODO: lily
+    questions = get_questions(user_id, is_answered=True)
     return render_template("answer.html", data={})
 
-@app.route("/question")
-def question():
-    #args = dict(request.args)
-    #question_obj = get_question(id) #TODO
-    #return render_template('question.html', obj=question_obj)
-    return "This is the question details page"
+@app.route("/question_detail", methods=['GET', 'POST'])
+def question_detail():
+    # TODO: kyle
+    if request.method == 'GET':
+        # get means that you are viewing a question that has been posted but
+        # not answered
+        pass
+        #args = dict(request.args)
+        #question_obj = get_question(id)
+        #return render_template('question.html', obj=question_obj)
+    elif request.method == 'POST':
+        data = json.loads(request.data)
+        pprint(data)
+        question_title = data['title']
+        assigned_to = data['assigned_to']
+        new_question = {
+            'question_title': question_title,
+            'assigned_to': [],
+            'is_answered': False,
+            'answers': []
+        }
+        save_question(new_question)
+        return "This is the question details page"
 
-@app.route("/answer_modal")
-def answer_modal():
-	return render_template("answer_modal.html", data={})
+@app.route("/answer_detail", methods=['GET', 'POST'])
+def answer_detail():
+    # TODO: andre
+    if request.method == 'GET':
+        q_id = request.args['id']
+        question = get_questions(q_id)
+        return render_template("answer_modal.html", data={})
+    elif request.method == 'POST':
+        data = json.loads(request.data)
+        q_id, body = data['id'], data['body']
+        question = get_questions(q_id)
+        if len(question['answers']) == 0:
+            question['answers'] = [question]
+        else:
+            question['answers'].append(question)
+        question['is_answered'] = True
+        save_question(question, q_id)
+        return 'ok'
 
 @app.route("/search")
 def search():
-    result = {
-      "results": {
-        "category1": {
-          "name": "Category 1",
-          "results": [
-            {
-              "title": "Result Title",
-              "url": "/optional/url/on/click",
-              "image": "optional-image.jpg",
-              "price": "Optional Price",
-              "description": "Optional Description"
-            },
-            {
-              "title": "Result Title",
-              "url": "/optional/url/on/click",
-              "image": "optional-image.jpg",
-              "price": "Optional Price",
-              "description": "Optional Description"
-            }
-          ]
-        },
-        "category2": {
-          "name": "Category 2",
-          "results": [
-            {
-              "title": "Result Title",
-              "url": "/optional/url/on/click",
-              "image": "optional-image.jpg",
-              "price": "Optional Price",
-              "description": "Optional Description"
-            }
-          ]
-        }
-      }
-    }
+    # TODO: ida
+    # TODO: flock.js
+    query = dict(request.args)['q']
+    result = process_query(query)
     return json.dumps(result)
 
 if __name__ == "__main__":
