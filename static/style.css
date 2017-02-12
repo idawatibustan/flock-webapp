@@ -19,6 +19,10 @@ span {
 	display: inline;
 }
 
+a, a:hover {
+	color:black;
+}
+
 nav.ui.compact.menu,
 nav .simple.dropdown.item,
 nav .simple.dropdown.item .menu,

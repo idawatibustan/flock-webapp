@@ -4,9 +4,11 @@
 {% endblock %}
 {% block body %}
 
-<h1>Hello there! This is the answer page.</h1>
-Click <a href="{{ url_for("answer_detail") }}">here</a> for answer modal.
+<h1>These questions need some answers!</h1>
+
 <div class="ui segments">
+
+<a href="{{ url_for("answer_detail") }}">
 	<div class="ui segment">
 		<div class="content">
 			<div style="float:left;"><h3>
@@ -20,7 +22,9 @@ Click <a href="{{ url_for("answer_detail") }}">here</a> for answer modal.
 			
 		</div>
 	</div>
+	</a>
 
+<a href="{{ url_for("answer_detail") }}">
 	<div class="ui segment">
 		<div class="content">
 			<div style="float:left;"><h3>
@@ -33,4 +37,5 @@ Click <a href="{{ url_for("answer_detail") }}">here</a> for answer modal.
 		</div>
 	</div>
 </div>
+</a>
 {% endblock %}
