@@ -24,11 +24,10 @@ def home():
 def questions():
     try:
         data = dict(request.args)
-        session_data = json.loads(session['data']['flockEvent'][0])
-        session['data'] = session_data
+        data["flockEvent"] = json.loads(data['flockEvent'][0])
+        session['data'] = data
     except:
         pass
-    print "SESSION['DATA']", session['data']
     params = { 'is_answered': True }
     questions = get_questions(params)
     return render_template("questions.html", data=questions)
@@ -46,7 +45,6 @@ def question_detail():
         if q_id == "0000":
             question_title = dict(request.args)['title'][0]
             assigned_to = ['Engineering','Marketing','Human Resources']
-            # session_data = json.loads(session['data']['flockEvent'][0])
             q_id = str(uuid.uuid4())
             new_question = {
                 'question_title': question_title,
@@ -55,10 +53,10 @@ def question_detail():
                 'answers': [],
                 'rank': 0,
                 'q_id': q_id,
-                'asker_id': session_data['userId']
+                'asker_id': session["data"]["flockEvent"]["userId"]
             }
             save_question(new_question)
-            return render_template("questions.html")
+            return questions()
         else:
             params = { 'q_id': q_id }
             question = get_questions(params)[0]
@@ -77,11 +75,11 @@ def question_detail():
             'answers': [],
             'rank': 0,
             'q_id': q_id,
-            'asker_id': session_data['userId']
+            'asker_id': session["data"]["flockEvent"]["userId"]
         }
         save_question(new_question)
         # return redirect(url_for('questions'))
-        return render_template("questions.html")
+        return redirect(url_for("questions"))
 
 
 @app.route("/answer_detail", methods=['GET', 'POST'])
