@@ -56,6 +56,8 @@ def question_detail():
                 'asker_id': session["data"]["flockEvent"]["userId"]
             }
             save_question(new_question)
+            new_question['event_name'] = 'question.assign'
+            r = requests.post('http://45.55.9.70:8080/{}'.format('floqdoc'), data=json.dumps(new_question))
             return questions()
         else:
             params = { 'q_id': q_id }
@@ -79,7 +81,9 @@ def question_detail():
         }
         save_question(new_question)
         # return redirect(url_for('questions'))
-        return redirect(url_for("questions"))
+        I#return redirect(url_for("questions"))
+        return questions()
+        #return redirect(url_for("questions"))
 
 
 @app.route("/answer_detail", methods=['GET', 'POST'])
@@ -98,7 +102,7 @@ def answer_detail():
         save_question(question)
         question['event_name'] = 'question.answered'
         r = requests.post('http://45.55.9.70:8080/{}'.format('floqdoc'), data=json.dumps(question))
-        return redirect(url_for("answers"))
+        return answers()
         # return render_template("answers.html")
 
 @app.route("/search")
