@@ -1,9 +1,13 @@
-def get_questions(q_id=None):
-    # TODO: andre - get from database
-    # TODO: find all filter conditions, question_id, user_id, is_answered
+def get_questions(params=None):
     questions = json.loads(open('json/questions.json').read())
-    if q_id:
-        return questions[q_id]
+    #TODO
+    if params:
+        if 'q_id' in params:
+            return questions['q_id']
+        else:
+            for param in params.keys():
+                questions = filter_by(param)
+            sophisticated_sort(res)
     return questions
 
 def process_query(query):
