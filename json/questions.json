@@ -108,11 +108,14 @@
         ]
     }, 
     "bbe185aa-dc5a-404d-94ff-5a2a55727ebe": {
-        "is_answered": false, 
+        "is_answered": true, 
         "rank": 0, 
         "q_id": "bbe185aa-dc5a-404d-94ff-5a2a55727ebe", 
         "question_title": "Where do I find information on our database schema?", 
-        "answers": [], 
+        "answers": [
+            "asdf", 
+            "and also, qwerty"
+        ], 
         "asker_id": "u:1lflyiir1liy1yg1", 
         "assigned_to": [
             "Engineering"
