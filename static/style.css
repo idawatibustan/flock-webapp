@@ -82,6 +82,7 @@ div.results {
 
 div.results .name {
     width: 80px !important;
+    font-size: 0.75em !important;
 }
 
 div.results .result {
