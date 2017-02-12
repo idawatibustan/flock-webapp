@@ -56,9 +56,6 @@ def process_query(query):
     return results
 
 def save_question(q_obj, q_id = None):
-    # TODO: andre
     questions = json.loads(open('json/questions.json').read())
-    if not q_id:
-        q_id = create_id() # can just use unix timestamp converted to string
     questions[q_id] = q_obj
     open('json/questions.json', 'w').write(json.dumps(questions, indent=4))
