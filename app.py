@@ -40,7 +40,7 @@ def question_detail():
         if q_id == "0000":
             question_title = dict(request.args)['title'][0]
             assigned_to = ['Engineering','Marketing','Human Resources']
-            session_data = session['data']['flockEvent'][0]
+            session_data = json.parse(json.loads(session['data']['flockEvent'][0]))
             print "SESSION_DATA", session_data
             q_id = str(uuid.uuid4())
             new_question = {
@@ -63,7 +63,7 @@ def question_detail():
         pprint(data)
         question_title = data['title']
         assigned_to = data['assigned_to']
-        session_data = session['data']['flockEvent']
+        session_data = json.parse(json.loads(session['data']['flockEvent'][0]))
         q_id = str(uuid.uuid4())
         new_question = {
             'question_title': question_title,
