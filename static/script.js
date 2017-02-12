@@ -1,1 +1,5 @@
-console.log("Hello world");
+$('.ui.search')
+    .search({
+        type: 'category'
+    })
+;

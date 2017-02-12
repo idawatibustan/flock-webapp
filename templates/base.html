@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
     <title>floQdoc</title>
-    <!-- Custom -->
-    <meta name="viewport" content="initial-scale=1">
-    <link rel="stylesheet" href="{{ url_for("static", filename="style.css") }}">
-    <link rel="stylesheet" href="{{ url_for("static", filename="proxima-nova.css") }}">
-    <script src="{{ url_for("static", filename="script.js") }}"></script>
 
     <!-- Semantic UI -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+
+    <!-- Custom -->
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for("static", filename="style.css") }}">
+    <link rel="stylesheet" href="{{ url_for("static", filename="proxima-nova.css") }}">
+    <script src="{{ url_for("static", filename="script.js") }}"></script>
     {% block head %}
     {% endblock %}
 </head>
@@ -33,6 +34,13 @@
         </div>
       </div>
     </nav>
+    <div class="ui category search">
+        <div class="ui icon input">
+            <input class="prompt" type="text" placeholder="Search animals...">
+                <i class="search icon"></i>
+            </div>
+        <div class="results"></div>
+    </div>
     <section class="content">
         {% block body %}
         {% endblock %}
