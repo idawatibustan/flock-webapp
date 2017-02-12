@@ -16,6 +16,13 @@
 
 <body>
 
+<div class="ui secondary basic menu">
+    <a class="item" href="{{ url_for("answers") }}">
+        <i class="reply icon"></i>
+        Back
+    </a>
+</div>
+
 <div class="ui form">
 	<h2>{{ data.question_title }}</h1>
 	<div class="field">
@@ -27,6 +34,7 @@
 				<div class="item" data-value="HR">Human Resources</div>
 				<div class="item" data-value="ENG">Engineering</div>
 				<div class="item" data-value="MAR">Marketing</div>
+				<div class="item" data-value="MIS">Miscellaneous</div>
 			</div>
 		</div>
 	</div>
