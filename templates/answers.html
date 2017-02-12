@@ -8,8 +8,8 @@
 <script>
 	$(document).ready(function() {
 		$("#btn").click(function() {
-			var qn_id = $(this).value;
-			flock.openWidget("{{ url_for("answer_detail") }}?id="+qn_id, 'modal');
+			var id = $(this).attr('value');
+			flock.openWidget("{{ url_for("answer_detail") }}?id="+id, 'modal');
 		});
 	});
 </script>
@@ -24,7 +24,7 @@
 		<div class="ui segment">
 			<div class="content">
 				<div style="float:left;"><h3>
-				<button id="btn" type="submit" name="question" value="{{qn[q_id]}}">
+				<button id="btn" type="submit" name="question" value="{{ qn.q_id }}">
 					Where can I contact building facility managers?
 				</button>
 				</h3></div>
