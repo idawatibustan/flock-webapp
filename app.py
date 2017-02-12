@@ -3,12 +3,14 @@ from gevent.wsgi import WSGIServer
 from pprint import pprint
 from settings import *
 from helper import *
+from fuzzywuzzy import fuzz
 import os
 import uuid
 import json
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24).encode("hex")
+powersearch = Powersearch()
 
 @app.route("/", methods=["GET", "POST"])
 def home():
@@ -74,45 +76,9 @@ def answer_detail():
 
 @app.route("/search")
 def search():
-    # TODO: ida
-    # TODO: flock.js
     query = dict(request.args)['q']
-    # result = process_query(query)
-    result = {
-      "results": {
-        "category1": {
-          "name": "Category 1",
-          "results": [
-            {
-              "title": "Result Title",
-              "url": "/optional/url/on/click",
-              "image": "optional-image.jpg",
-              "price": "Optional Price",
-              "description": "Optional Description"
-            },
-            {
-              "title": "Result Title",
-              "url": "/optional/url/on/click",
-              "image": "optional-image.jpg",
-              "price": "Optional Price",
-              "description": "Optional Description"
-            }
-          ]
-        },
-        "category2": {
-          "name": "Category 2",
-          "results": [
-            {
-              "title": "Result Title",
-              "url": "/optional/url/on/click",
-              "image": "optional-image.jpg",
-              "price": "Optional Price",
-              "description": "Optional Description"
-            }
-          ]
-        }
-      }
-    }
+    powersearch.update(query)
+    result = powersearch.get_results()
     return json.dumps(result)
 
 if __name__ == "__main__":
