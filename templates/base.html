@@ -30,9 +30,9 @@
         <i class="dropdown icon"></i>
         <div class="menu">
             {% if active_page == "questions" %}
-                <a href="{{ url_for("answers") }}" class="item" style="background: #697178">A</a>
+                <a href="{{ url_for("answers") }}" class="item" id="a">A</a>
             {% else %}
-                <a href="{{ url_for("questions") }}" class="item" style="background: #0abe50;">Q</a>
+                <a href="{{ url_for("questions") }}" class="item" id="q">Q</a>
             {% endif %}
         </div>
       </div>

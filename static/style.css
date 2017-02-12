@@ -45,6 +45,14 @@ a, a:hover {
 	color:black;
 }
 
+#a {
+    background: #697178;
+}
+
+#q {
+    background: #0abe50;
+}
+
 nav.ui.compact.menu,
 nav .simple.dropdown.item,
 nav .simple.dropdown.item .menu,
