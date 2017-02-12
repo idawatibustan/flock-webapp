@@ -21,13 +21,13 @@ def home():
 
 @app.route("/questions")
 def questions():
-    params = { 'is_answered': False }
+    params = { 'is_answered': True }
     questions = get_questions(params)
     return render_template("questions.html", data=questions)
 
 @app.route("/answers")
 def answers():
-    params = { 'is_answered': True }
+    params = { 'is_answered': False }
     questions = get_questions(params)
     return render_template("answers.html", data=questions)
 
