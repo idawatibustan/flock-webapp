@@ -69,3 +69,16 @@ section.nav_container > div.ui.category.search {
     left: 72px;
     top: 9px;
 }
+
+div.results {
+    left: -65px !important;
+    width: 283px !important;
+}
+
+div.results .name {
+    width: 80px !important;
+}
+
+div.results .result {
+    margin-left: 80px !important;
+}
