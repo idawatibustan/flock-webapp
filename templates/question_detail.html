@@ -37,7 +37,7 @@
         </div>
         {% endfor %}
 </div>
-<div class="ui right floated submit button">
+<a class="ui right floated submit button" href="{{ url_for("answer_detail") }}?id={{ data.q_id }}">
     Add Another Comment
-</div>
+</a>
 {% endblock %}

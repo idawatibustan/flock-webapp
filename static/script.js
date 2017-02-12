@@ -20,4 +20,8 @@ $(document)
     $('section.content').fadeTo("fast", 1);
     });
 
+  $('body')
+  // default everything
+  .transition();
+
 });

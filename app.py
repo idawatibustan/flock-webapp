@@ -21,6 +21,8 @@ def home():
 
 @app.route("/questions")
 def questions():
+    session['data'] = dict(request.args)
+    print "SESSION['DATA']", session['data']
     params = { 'is_answered': True }
     questions = get_questions(params)
     return render_template("questions.html", data=questions)
@@ -35,9 +37,27 @@ def answers():
 def question_detail():
     if request.method == 'GET':
         q_id = dict(request.args)['id'][0]
-        params = { 'q_id': q_id }
-        question = get_questions(params)[0]
-        return render_template('question_detail.html', data=question)
+        if q_id == "0000":
+            question_title = dict(request.args)['title'][0]
+            assigned_to = ['Engineering','Marketing','Human Resources']
+            session_data = session['data']
+            print "SESSION_DATA", session_data
+            q_id = str(uuid.uuid4())
+            new_question = {
+                'question_title': question_title,
+                'assigned_to': assigned_to,
+                'is_answered': False,
+                'answers': [],
+                'rank': 0,
+                'q_id': q_id,
+                'asker_id': session_data['userId']
+            }
+            save_question(new_question)
+            return render_template("questions.html")
+        else:
+            params = { 'q_id': q_id }
+            question = get_questions(params)[0]
+            return render_template('question_detail.html', data=question)
     elif request.method == 'POST':
         data = json.loads(request.data)
         pprint(data)
@@ -57,6 +77,7 @@ def question_detail():
         save_question(new_question)
         # return redirect(url_for('questions'))
         return render_template("questions.html")
+
 
 @app.route("/answer_detail", methods=['GET', 'POST'])
 def answer_detail():

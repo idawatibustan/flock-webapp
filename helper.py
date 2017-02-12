@@ -128,7 +128,7 @@ class Powersearch:
                     "results": [
                         {
                           "title": self.query,
-                          "url": "/question_detail",
+                          "url": "/question_detail?id=0000&title="+str(self.query),
                           "description": "Click to submit"
                         }
                     ]
