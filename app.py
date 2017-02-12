@@ -19,6 +19,11 @@ def ask():
 def answer():
     return render_template("answer.html", data={})
 
+
+@app.route("/answer_modal")
+def answer_modal():
+	return render_template("answer_modal.html", data={})
+
 @app.route("/search")
 def search():
     result = {

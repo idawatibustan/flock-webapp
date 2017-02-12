@@ -2,6 +2,24 @@ html {
     font-family: "Proxima Nova", "Arial", sans-serif;
 }
 
+.ui.blue.segment {
+	width: 100%;
+	height: 120px;
+}
+
+.ui.fluid.card {
+	position: relative;
+	width: 100%;
+}
+
+h3 {
+	display: inline;
+}
+
+span {
+	display: inline;
+}
+
 nav.ui.compact.menu,
 nav .simple.dropdown.item,
 nav .simple.dropdown.item .menu,
