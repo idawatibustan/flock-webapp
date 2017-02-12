@@ -17,8 +17,8 @@
 </head>
 <body>
     <nav>
-        <a href="{{ url_for("ask") }}">ask</a>
-        <a href="{{ url_for("answer") }}">answer</a>
+        <a href="{{ url_for("ask") }}"{% if active_page == "ask" %} class="active"{% endif %}>ask</a>
+        <a href="{{ url_for("answer") }}"{% if active_page == "answer" %} class="active"{% endif %}>answer</a>
     </nav>
     <section class="content">
         {% block body %}
