@@ -12,12 +12,12 @@ html {
 	width: 100%;
 }
 
-.header {
-	display: inline-block;
+h3 {
+	display: inline;
 }
 
-.meta span {
-	margin-left: 100px;
+span {
+	display: inline;
 }
 
 nav.ui.compact.menu,
