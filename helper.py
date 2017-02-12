@@ -59,6 +59,7 @@ def save_question(q_obj):
     questions = json.loads(open('json/questions.json').read())
     q_id = q_obj['q_id']
     ind = None
+    # holy shit this is so inefficient
     for i, obj in enumerate(questions):
         if dic['q_id'] = q_id:
             ind = i
