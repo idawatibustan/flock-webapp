@@ -86,9 +86,7 @@
         "rank": 0, 
         "q_id": "b9c74e1e-c8fb-49e5-9f89-7faaf5df06bb", 
         "question_title": "How do I go about claiming my expenses?", 
-        "answers": [
-            "by saying help me"
-        ], 
+        "answers": [], 
         "asker_id": "u:j55g5dg6jj6sgpv6", 
         "assigned_to": [
             "Human Resources"
@@ -99,9 +97,7 @@
         "rank": 0, 
         "q_id": "f9a5a022-c372-4f7f-ae9f-894a3a8e144a", 
         "question_title": "Where do I access payroll information", 
-        "answers": [
-            "From the 7th level of hell"
-        ], 
+        "answers": [], 
         "asker_id": "u:1lflyiir1liy1yg1", 
         "assigned_to": [
             "Human Resources"
