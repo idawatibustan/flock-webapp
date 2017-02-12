@@ -1,1 +1,112 @@
-{}
+{
+    "f887ae61-ff83-4378-b39a-e83450391537": {
+        "is_answered": false, 
+        "rank": 0, 
+        "q_id": "f887ae61-ff83-4378-b39a-e83450391537", 
+        "question_title": "Where should I go to update my personal data?", 
+        "answers": [], 
+        "asker_id": "u:grb5by5xxoo7plbb", 
+        "assigned_to": [
+            "Human Resources"
+        ]
+    }, 
+    "ffc66f99-9d84-44de-b7d9-28a4dc1b8971": {
+        "is_answered": false, 
+        "rank": 0, 
+        "q_id": "ffc66f99-9d84-44de-b7d9-28a4dc1b8971", 
+        "question_title": "How do I apply for time off?", 
+        "answers": [], 
+        "asker_id": "u:grb5by5xxoo7plbb", 
+        "assigned_to": [
+            "Human Resources"
+        ]
+    }, 
+    "d0e1bbeb-a3ab-48fb-a9dc-373c1dd1f09d": {
+        "is_answered": false, 
+        "rank": 0, 
+        "q_id": "d0e1bbeb-a3ab-48fb-a9dc-373c1dd1f09d", 
+        "question_title": "How many days of leave are we entitled to?", 
+        "answers": [], 
+        "asker_id": "u:1lflyiir1liy1yg1", 
+        "assigned_to": [
+            "Human Resources"
+        ]
+    }, 
+    "71d75a26-c6f9-4ee7-a359-ce887018c3e6": {
+        "is_answered": false, 
+        "rank": 0, 
+        "q_id": "71d75a26-c6f9-4ee7-a359-ce887018c3e6", 
+        "question_title": "Where can I find documentations for the company\u2019s code review, standards and other tech debt guidelines?", 
+        "answers": [], 
+        "asker_id": "u:tejieggyt3eqe7ts", 
+        "assigned_to": [
+            "Engineering"
+        ]
+    }, 
+    "43693b91-4f1e-4e2a-aa2c-c75cba532f07": {
+        "is_answered": false, 
+        "rank": 0, 
+        "q_id": "43693b91-4f1e-4e2a-aa2c-c75cba532f07", 
+        "question_title": "What is the company payroll schedule like?", 
+        "answers": [], 
+        "asker_id": "u:j55g5dg6jj6sgpv6", 
+        "assigned_to": [
+            "Human Resources"
+        ]
+    }, 
+    "58cdb480-9539-42d0-b3ad-49dba53fc6df": {
+        "is_answered": false, 
+        "rank": 0, 
+        "q_id": "58cdb480-9539-42d0-b3ad-49dba53fc6df", 
+        "question_title": "What do I need to install to set up my development environment?", 
+        "answers": [], 
+        "asker_id": "u:e9q3qfqfifqfw3qr", 
+        "assigned_to": [
+            "Engineering"
+        ]
+    }, 
+    "b9c74e1e-c8fb-49e5-9f89-7faaf5df06bb": {
+        "is_answered": false, 
+        "rank": 0, 
+        "q_id": "b9c74e1e-c8fb-49e5-9f89-7faaf5df06bb", 
+        "question_title": "How do I go about claiming my expenses?", 
+        "answers": [], 
+        "asker_id": "u:j55g5dg6jj6sgpv6", 
+        "assigned_to": [
+            "Human Resources"
+        ]
+    }, 
+    "f9a5a022-c372-4f7f-ae9f-894a3a8e144a": {
+        "is_answered": false, 
+        "rank": 0, 
+        "q_id": "f9a5a022-c372-4f7f-ae9f-894a3a8e144a", 
+        "question_title": "Where do I access payroll information", 
+        "answers": [], 
+        "asker_id": "u:1lflyiir1liy1yg1", 
+        "assigned_to": [
+            "Human Resources"
+        ]
+    }, 
+    "bbe185aa-dc5a-404d-94ff-5a2a55727ebe": {
+        "is_answered": false, 
+        "rank": 0, 
+        "q_id": "bbe185aa-dc5a-404d-94ff-5a2a55727ebe", 
+        "question_title": "What do I need to install to set up my development environment?", 
+        "answers": [], 
+        "asker_id": "u:1lflyiir1liy1yg1", 
+        "assigned_to": [
+            "Engineering"
+        ]
+    }, 
+    "3468e7d1-bb78-49b6-87f5-549113304bdc": {
+        "is_answered": false, 
+        "rank": 0, 
+        "q_id": "3468e7d1-bb78-49b6-87f5-549113304bdc", 
+        "question_title": "What employee benefits am I entitled to?", 
+        "answers": [], 
+        "asker_id": "u:kwuaff9sootkzzat", 
+        "assigned_to": [
+            "Human Resources"
+        ]
+    }
+}
