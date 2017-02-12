@@ -20,17 +20,17 @@
 <body>
     <nav class="ui compact menu">
       <div class="ui simple dropdown item">
-        {% if active_page == "ask" %}
+        {% if active_page == "questions" %}
             Q
         {% else %}
             A
         {% endif %}
         <i class="dropdown icon"></i>
         <div class="menu">
-            {% if active_page == "ask" %}
-                <a href="{{ url_for("answer") }}" class="item">A</a>
+            {% if active_page == "questions" %}
+                <a href="{{ url_for("answers") }}" class="item">A</a>
             {% else %}
-                <a href="{{ url_for("ask") }}" class="item">Q</a>
+                <a href="{{ url_for("questions") }}" class="item">Q</a>
             {% endif %}
         </div>
       </div>

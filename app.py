@@ -18,14 +18,14 @@ def home():
 @app.route("/questions")
 def questions():
     # TODO: kyle
-    questions = get_questions(user_id, is_answered = False)
-    return render_template("ask.html", data={})
+    #questions = get_questions(user_id, is_answered = False)
+    return render_template("questions.html", data={})
 
 @app.route("/answers")
 def answers():
     # TODO: lily
-    questions = get_questions(user_id, is_answered=True)
-    return render_template("answer.html", data={})
+    #questions = get_questions(user_id, is_answered=True)
+    return render_template("answers.html", data={})
 
 @app.route("/question_detail", methods=['GET', 'POST'])
 def question_detail():
@@ -37,6 +37,7 @@ def question_detail():
         #args = dict(request.args)
         #question_obj = get_question(id)
         #return render_template('question.html', obj=question_obj)
+        return render_template('question_detail.html', data={})
     elif request.method == 'POST':
         data = json.loads(request.data)
         pprint(data)
@@ -55,13 +56,13 @@ def question_detail():
 def answer_detail():
     # TODO: andre
     if request.method == 'GET':
-        q_id = request.args['id']
-        question = get_questions(q_id)
-        return render_template("answer_modal.html", data={})
+        # q_id = request.args['id']
+        #question = get_questions(q_id)
+        return render_template("answer_detail.html", data={})
     elif request.method == 'POST':
         data = json.loads(request.data)
         q_id, body = data['id'], data['body']
-        question = get_questions(q_id)
+        #question = get_questions(q_id)
         if len(question['answers']) == 0:
             question['answers'] = [question]
         else:
