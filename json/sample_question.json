@@ -8,7 +8,8 @@
         "answers": [
             "Go to this webpage and do that",
             "Ask Josh from HR"
-        ]
+        ],
+        "rank": 5
     },
     {
         "q_id": "32897482",
@@ -16,6 +17,7 @@
         "question_title": "Is president day a holiday for us?",
         "assigned_to": ["Human Resources"],
         "is_answered": false,
-        "answers": []
+        "answers": [],
+        "rank": 3
     }
 ]
