@@ -1,9 +1,11 @@
-def get_questions(q_id=None):
-    # TODO: andre - get from database
-    # TODO: find all filter conditions, question_id, user_id, is_answered
+def get_questions(params=None):
+    # takes in asker_id, q_id, and is_answered as param keys
     questions = json.loads(open('json/questions.json').read())
-    if q_id:
-        return questions[q_id]
+    if params:
+        for param, val in params.iteritems():
+            questions = [question for question in questions if question[param] == val]
+        sophisticated_sort(res)
+        questions = sorted(questions, key=lambda x: x['rank'], reverse=True)
     return questions
 
 def process_query(query):
@@ -54,9 +56,6 @@ def process_query(query):
     return results
 
 def save_question(q_obj, q_id = None):
-    # TODO: andre
     questions = json.loads(open('json/questions.json').read())
-    if not q_id:
-        q_id = create_id() # can just use unix timestamp converted to string
     questions[q_id] = q_obj
     open('json/questions.json', 'w').write(json.dumps(questions, indent=4))

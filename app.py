@@ -47,7 +47,10 @@ def question_detail():
             'question_title': question_title,
             'assigned_to': [],
             'is_answered': False,
-            'answers': []
+            'answers': [],
+            'rank': 0,
+            'q_id': '1298370123',
+            'asker_id': 'u:12938704'
         }
         save_question(new_question)
         return "This is the question details page"
