@@ -17,13 +17,11 @@
 	<a href="{{ url_for("question_detail") }}?id={{ qn.q_id }}">
 		<div class="ui segment">
 			<div class="content">
-				<div style="float:left;width:325px;"><h3>
+				<div style="float:left;"><h3>
 					{{ qn.question_title }}
 				</h3></div>
-				<div style="float:right;"><i>2hr ago</i></div>
-				<br />
-				<br />
-				<br />
+				<br></br>
+				<div>
 				<span style="float:left;position:relative;">
 					{% if qn.answers[0]|length <= 80 %}
 					{{ qn.answers[0] }}
@@ -31,10 +29,9 @@
 					{% if qn.answers[0]|length > 80 %}
 					{{ qn.answers[0][:78] }}...
 					{% endif %}
-					
 				</span>
-				<br />
-				<br />
+				</div>
+				<br></br>
 				<div style="float:left;color:grey;">
 				{% if qn.answers|length - 1 == 0 %}
 				<i> No more answers</i></div>

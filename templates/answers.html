@@ -19,21 +19,17 @@
 <h1>These questions need some answers!</h1>
 
 <div class="ui segments">
-
 	{% for qn in data %}
+	<a href="{{ url_for("answer_detail") }}?id={{ qn.q_id }}">
 		<div class="ui segment">
 			<div class="content" id="question" value="{{ qn.q_id }}">
 				<div style="float:left;"><h3>
 					{{ qn.question_title }}
 				</h3></div>
-				<div style="float:right;"><i>2hr ago</i></div>
-				
-				<br />
-				<br />
-				<div style="float:left;">No Answers</div>
-				
+				<br></br>
 			</div>
 		</div>
+		</a>
 	{% endfor %}
 </div>
 {% endblock %}
