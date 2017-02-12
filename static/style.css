@@ -11,3 +11,11 @@ html {
 	position: relative;
 	width: 100%;
 }
+
+.header {
+	display: inline-block;
+}
+
+.meta span {
+	margin-left: 100px;
+}
