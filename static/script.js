@@ -11,4 +11,13 @@ $(document)
 
   $('.ui.dropdown')
    .dropdown();
+
+  $('input.prompt')
+   .focus(function(evt) {
+    $('section.content').fadeTo("fast", 0.2);
+   })
+   .focusout(function(evt){
+    $('section.content').fadeTo("fast", 1);
+    });
+
 });
