@@ -4,6 +4,7 @@ html {
 
 body {
     min-width: 0!important;
+    display: none;
 }
 
 section.content {
