@@ -16,9 +16,22 @@
     {% endblock %}
 </head>
 <body>
-    <nav>
-        <a href="{{ url_for("ask") }}"{% if active_page == "ask" %} class="active"{% endif %}>ask</a>
-        <a href="{{ url_for("answer") }}"{% if active_page == "answer" %} class="active"{% endif %}>answer</a>
+    <nav class="ui compact menu">
+      <div class="ui simple dropdown item">
+        {% if active_page == "ask" %}
+            Q
+        {% else %}
+            A
+        {% endif %}
+        <i class="dropdown icon"></i>
+        <div class="menu">
+            {% if active_page == "ask" %}
+                <a href="{{ url_for("answer") }}" class="item">A</a>
+            {% else %}
+                <a href="{{ url_for("ask") }}" class="item">Q</a>
+            {% endif %}
+        </div>
+      </div>
     </nav>
     <section class="content">
         {% block body %}
