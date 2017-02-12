@@ -2,7 +2,7 @@ from flask import Flask, render_template, url_for, request, session, redirect
 from gevent.wsgi import WSGIServer
 from pprint import pprint
 from settings import *
-from helpers import *
+from helper import *
 import os
 import uuid
 import json
