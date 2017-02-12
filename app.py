@@ -22,6 +22,7 @@ def home():
 @app.route("/questions")
 def questions():
     session['data'] = dict(request.args)
+    print "SESSION['DATA']", session['data']
     params = { 'is_answered': True }
     questions = get_questions(params)
     return render_template("questions.html", data=questions)
@@ -39,7 +40,8 @@ def question_detail():
         if q_id == "0000":
             question_title = dict(request.args)['title'][0]
             assigned_to = ['Engineering','Marketing','Human Resources']
-            session_data = session['data']['flockEvent']
+            session_data = session['data']
+            print "SESSION_DATA", session_data
             q_id = str(uuid.uuid4())
             new_question = {
                 'question_title': question_title,
@@ -48,7 +50,7 @@ def question_detail():
                 'answers': [],
                 'rank': 0,
                 'q_id': q_id,
-                'asker_id': session_data['userId'][0]
+                'asker_id': session_data['userId']
             }
             save_question(new_question)
             return render_template("questions.html")
