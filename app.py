@@ -2,6 +2,7 @@ from flask import Flask, render_template, url_for, request, session, redirect
 from gevent.wsgi import WSGIServer
 from settings import *
 import os
+import json
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24).encode("hex")
@@ -18,9 +19,49 @@ def ask():
 def answer():
     return render_template("answer.html", data={})
 
+
 @app.route("/answer_modal")
 def answer_modal():
 	return render_template("answer_modal.html", data={})
+
+@app.route("/search")
+def search():
+    result = {
+      "results": {
+        "category1": {
+          "name": "Category 1",
+          "results": [
+            {
+              "title": "Result Title",
+              "url": "/optional/url/on/click",
+              "image": "optional-image.jpg",
+              "price": "Optional Price",
+              "description": "Optional Description"
+            },
+            {
+              "title": "Result Title",
+              "url": "/optional/url/on/click",
+              "image": "optional-image.jpg",
+              "price": "Optional Price",
+              "description": "Optional Description"
+            }
+          ]
+        },
+        "category2": {
+          "name": "Category 2",
+          "results": [
+            {
+              "title": "Result Title",
+              "url": "/optional/url/on/click",
+              "image": "optional-image.jpg",
+              "price": "Optional Price",
+              "description": "Optional Description"
+            }
+          ]
+        }
+      }
+    }
+    return json.dumps(result)
 
 if __name__ == "__main__":
     http_server = WSGIServer(("", PORT), app)
