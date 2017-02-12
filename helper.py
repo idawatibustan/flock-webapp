@@ -55,7 +55,16 @@ def process_query(query):
     }
     return results
 
-def save_question(q_obj, q_id = None):
+def save_question(q_obj):
     questions = json.loads(open('json/questions.json').read())
-    questions[q_id] = q_obj
+    q_id = q_obj['q_id']
+    ind = None
+    for i, obj in enumerate(questions):
+        if dic['q_id'] = q_id:
+            ind = i
+            break
+    if ind:
+        questions[ind] = q_obj
+    else:
+        questions.append(q_obj)
     open('json/questions.json', 'w').write(json.dumps(questions, indent=4))
