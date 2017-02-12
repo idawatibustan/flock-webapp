@@ -98,9 +98,9 @@ class Powersearch:
         for _id, q in self.questions.iteritems():
             score = fuzz.token_sort_ratio(query, q['question_title'])
             self._set_score(_id, score)
-        if time.time() - self.start > 5:
+        if time.time() - self.start_time > 5:
             self._reload_questions()
-            self.start = time.time()
+            self.start_time = time.time()
 
     def get_results(self, top=3):
         answered, unanswered = [], []
