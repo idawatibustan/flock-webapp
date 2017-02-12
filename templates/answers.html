@@ -17,12 +17,12 @@
 
 <div class="ui segments">
 
-	{% for qn in question_list %}
+	{% for qn in data %}
 	<!-- <a href="{{ url_for("answer_detail") }}"> -->
 		<div class="ui segment">
 			<div class="content">
 				<div style="float:left;"><h3>
-				<button id="btn" type="submit" name="question" value="{{qn[id]}}">
+				<button id="btn" type="submit" name="question" value="{{q_id}}">
 					Where can I contact building facility managers?
 				</button>
 				</h3></div>
