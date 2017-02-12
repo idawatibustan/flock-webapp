@@ -83,4 +83,5 @@ def search():
 
 if __name__ == "__main__":
     http_server = WSGIServer(("", PORT), app)
+    print 'Listening on port', PORT
     http_server.serve_forever()

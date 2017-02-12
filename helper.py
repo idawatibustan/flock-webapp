@@ -78,8 +78,11 @@ class Powersearch:
         self.scores = {}
         self.num_words = 0
 
+    def _set_score(self, _id, score):
+        self.scores[_id] = score
+
     def _enrich(self, obj):
-        _id, score = obj.items()
+        _id, score = obj
         d = {
             "title": self.questions[_id]['question_title'],
             "url": "/questions/{}".format(_id),
@@ -93,15 +96,17 @@ class Powersearch:
             if query == '':
                 self._reinitialize()
             else:
-                self.num_words = len(query.split(' '))
+                self.num_words = len(query[0].split(' '))
                 for _id, q in self.questions.iteritems():
-                    self.scores[_id] = fuzz.token_sort_ratio(query, q['question_title'])
+                    score = fuzz.token_sort_ratio(query, q['question_title'])
+                    self._set_score(_id, score)
 
     def get_results(self, top=3):
         answered, unanswered = [], []
         threshold = self.num_words * 5
         for _id, q in self.questions.iteritems():
             score = self.scores[_id]
+            print score, threshold, q['question_title']
             if score > threshold:
                 if q['is_answered']:
                     answered.append((_id, score))
