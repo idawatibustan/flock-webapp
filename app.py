@@ -13,12 +13,20 @@ def home():
 
 @app.route("/ask")
 def ask():
+    session["data"] = dict(request.args)
+    print json.dumps(session["data"], indent=4)
     return render_template("ask.html", data={})
 
 @app.route("/answer")
 def answer():
     return render_template("answer.html", data={})
 
+@app.route("/question")
+def question():
+    #args = dict(request.args)
+    #question_obj = get_question(id) #TODO
+    #return render_template('question.html', obj=question_obj)
+    return "This is the question details page"
 
 @app.route("/answer_modal")
 def answer_modal():
