@@ -36,6 +36,7 @@ nav .simple.dropdown.item .menu a.item {
 
 .ui.search .prompt {
     border-radius: 0;
+    width: 218px;
 }
 
 section.nav_container {
