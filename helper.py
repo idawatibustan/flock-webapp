@@ -96,7 +96,7 @@ class Powersearch:
             self._reload_questions()
         self.num_words = len(query[0].split(' '))
         for _id, q in self.questions.iteritems():
-            score = fuzz.token_sort_ratio(query, q['question_title'])
+            score = fuzz.partial_ratio(query, q['question_title'])
             self._set_score(_id, score)
         if time.time() - self.start_time > 5:
             self._reload_questions()
