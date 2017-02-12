@@ -18,6 +18,7 @@
     {% endblock %}
 </head>
 <body>
+    <section class="nav_container">
     <nav class="ui compact menu">
       <div class="ui simple dropdown item">
         {% if active_page == "questions" %}
@@ -42,6 +43,7 @@
       </div>
       <div class="results"></div>
     </div>
+    </section>
     <section class="content">
         {% block body %}
         {% endblock %}

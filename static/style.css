@@ -2,9 +2,8 @@ html {
     font-family: "Proxima Nova", "Arial", sans-serif;
 }
 
-.ui.blue.segment {
+.ui.segment {
 	width: 100%;
-	height: 120px;
 }
 
 .ui.fluid.card {
@@ -28,4 +27,25 @@ nav .simple.dropdown.item .menu a.item {
     color: #fff !important;
     border: none;
     font-weight: bold;
+}
+
+.ui.menu,
+.ui.search {
+    display: inline-block;
+}
+
+.ui.search .prompt {
+    border-radius: 0;
+}
+
+section.nav_container {
+    padding: 10px;
+}
+
+section.nav_container > * {
+    display: inline-block;
+}
+
+section.nav_container > div.ui.category.search {
+    margin-left: -4px;
 }
