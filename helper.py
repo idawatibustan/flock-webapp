@@ -72,6 +72,7 @@ class Powersearch:
         self.scores = {}
         self.num_words = 0
         self.query = ''
+        self.start_time = time.time()
 
     def _reload_questions(self):
         self.questions = json.loads(open('json/questions.json').read())
@@ -97,6 +98,9 @@ class Powersearch:
         for _id, q in self.questions.iteritems():
             score = fuzz.token_sort_ratio(query, q['question_title'])
             self._set_score(_id, score)
+        if time.time() - self.start > 5:
+            self._reload_questions()
+            self.start = time.time()
 
     def get_results(self, top=3):
         answered, unanswered = [], []
