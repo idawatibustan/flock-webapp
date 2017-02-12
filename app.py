@@ -48,7 +48,7 @@ def question_detail():
                 'answers': [],
                 'rank': 0,
                 'q_id': q_id,
-                'asker_id': session_data['userId']
+                'asker_id': session_data['userId'][0]
             }
             save_question(new_question)
             return render_template("questions.html")
