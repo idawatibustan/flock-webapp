@@ -14,7 +14,8 @@
 <div style="padding-left:10px">
     <h2>{{ data.question_title }}</h2>
     <div class="meta">
-        <i>February 11, 2017, at 9:35 PM</i>
+        <i>{{ generate_time() }}</i>
+        <!-- <i>February 11, 2017, at 9:35 PM</i> -->
     </div>
 </div>
 
@@ -25,9 +26,9 @@
         <div class="ui segment">
             <div class="comment">
                 <div class="content">
-                    <div class="author" style="float:left;">Anonymous</div>
+                    <div class="author" style="float:left;">{{ generate_name() }}</div>
                     <div class="metadata">
-                        <div style="float:right;"><i>Today at 5:42 PM</i></div>
+                        <div style="float:right;"><i>{{ generate_time() }}</i></div>
                     </div>
                     <div class="text">
                         {{ answer }}
