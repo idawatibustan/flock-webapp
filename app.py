@@ -21,6 +21,7 @@ def home():
 
 @app.route("/questions")
 def questions():
+    session['data'] = dict(request.args)
     params = { 'is_answered': True }
     questions = get_questions(params)
     return render_template("questions.html", data=questions)
