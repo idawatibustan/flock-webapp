@@ -21,22 +21,22 @@ def home():
 
 @app.route("/questions")
 def questions():
-    params = { 'is_answered': False }
+    params = { 'is_answered': True }
     questions = get_questions(params)
     return render_template("questions.html", data=questions)
 
 @app.route("/answers")
 def answers():
-    params = { 'is_answered': True }
+    params = { 'is_answered': False }
     questions = get_questions(params)
     return render_template("answers.html", data=questions)
 
 @app.route("/question_detail", methods=['GET', 'POST'])
 def question_detail():
     if request.method == 'GET':
-        q_id = dict(request.args)['id']
-        question = get_question(q_id)
-        return render_template('question_detail.html', data=question)
+        # q_id = dict(request.args)['id']
+        # question = get_question(q_id)
+        return render_template('question_detail.html',data=[])#, data=question)
     elif request.method == 'POST':
         data = json.loads(request.data)
         pprint(data)

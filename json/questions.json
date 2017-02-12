@@ -1,54 +1,62 @@
 {
     "f887ae61-ff83-4378-b39a-e83450391537": {
-        "is_answered": false, 
+        "is_answered": true, 
         "rank": 0, 
         "q_id": "f887ae61-ff83-4378-b39a-e83450391537", 
         "question_title": "Where should I go to update my personal data?", 
-        "answers": [], 
+        "answers": ["You can do so on your JIRA account.",
+                    "use settings on JIRA"], 
         "asker_id": "u:grb5by5xxoo7plbb", 
         "assigned_to": [
             "Human Resources"
         ]
     }, 
     "ffc66f99-9d84-44de-b7d9-28a4dc1b8971": {
-        "is_answered": false, 
+        "is_answered": true, 
         "rank": 0, 
         "q_id": "ffc66f99-9d84-44de-b7d9-28a4dc1b8971", 
         "question_title": "How do I apply for time off?", 
-        "answers": [], 
+        "answers": ["tell HR at least 2 weeks beforehand",
+                    "You have to submit the appropriate paperwork to HR at least 2 weeks in advance. I think you can find it on the company site under \"Employee Resources\" tab.",
+                    "You can also email HR. Make sure your supervisor is notified of your intent to take a vacation at least 2-3 weeks before, and that you take care of all the work that you need to do before you leave (obviously). Also make sure you don't leave any edible content in your drawers! We don't want a repeat of the ants incident 2k15.",
+                    "Never forget. Ants incident, 2k15. Many great allies were lost that day."
+                   ], 
         "asker_id": "u:grb5by5xxoo7plbb", 
         "assigned_to": [
             "Human Resources"
         ]
     }, 
     "d0e1bbeb-a3ab-48fb-a9dc-373c1dd1f09d": {
-        "is_answered": false, 
+        "is_answered": true, 
         "rank": 0, 
         "q_id": "d0e1bbeb-a3ab-48fb-a9dc-373c1dd1f09d", 
         "question_title": "How many days of leave are we entitled to?", 
-        "answers": [], 
+        "answers": ["maybe 0.5 if you're good.",
+                    "I haven't had a day off since Nixon.",
+                    "woof"
+                   ], 
         "asker_id": "u:1lflyiir1liy1yg1", 
         "assigned_to": [
             "Human Resources"
         ]
     }, 
     "71d75a26-c6f9-4ee7-a359-ce887018c3e6": {
-        "is_answered": false, 
+        "is_answered": true, 
         "rank": 0, 
         "q_id": "71d75a26-c6f9-4ee7-a359-ce887018c3e6", 
         "question_title": "Where can I find documentations for the company\u2019s code review, standards and other tech debt guidelines?", 
-        "answers": [], 
+        "answers": ["bruh didn't you JUST have orientation?? you should know this"], 
         "asker_id": "u:tejieggyt3eqe7ts", 
         "assigned_to": [
             "Engineering"
         ]
     }, 
     "43693b91-4f1e-4e2a-aa2c-c75cba532f07": {
-        "is_answered": false, 
+        "is_answered": true, 
         "rank": 0, 
         "q_id": "43693b91-4f1e-4e2a-aa2c-c75cba532f07", 
         "question_title": "What is the company payroll schedule like?", 
-        "answers": [], 
+        "answers": ["¯\\_(ツ)_/¯"], 
         "asker_id": "u:j55g5dg6jj6sgpv6", 
         "assigned_to": [
             "Human Resources"

@@ -3,71 +3,38 @@
 {% block head %}
 {% endblock %}
 {% block body %}
+
 <div class="ui segments">
+
+
+{% for qn in data %}
 	<a href="{{ url_for("question_detail") }}">
 		<div class="ui segment">
 			<div class="content">
 				<div style="float:left;"><h3>
-					How do I submit vacation times?
+					{{ qn.question_title }}
 				</h3></div>
 				<div style="float:right;"><i>2hr ago</i></div>
 
 				<br />
 				<br />
-				<span style="float:left;">You have to submit the appropriate paperwork to HR...</span>
+				<span style="float:left;">
+					{{ qn.answers[0][:51] }}
+				</span>
 				<br />
-				<div style="float:left;color:grey;"><i>2 more answers</i></div>
+				<br />
+				<div style="float:left;color:grey;">
+				{% if qn.answers|length - 1 == 0 %}
+				<i> No more answers</i></div>
+				{% endif %}
+				{% if qn.answers|length - 1 > 0 %}
+				<i> {{ qn.answers|length - 1 }} more answers</i></div>
+				{% endif %}
 			</div>
 		</div>
 	</a>
 
-	<a href="{{ url_for("question_detail") }}">
-		<div class="ui segment">
-			<div class="content">
-				<div style="float:left;"><h3>
-					How do I check when my supervisors are in?
-				</h3></div>
-				<div style="float:right;"><i>1d ago</i></div>
-				<br />
-				<br />
-				<span style="float:left;">There should be a schedule posted on every cubicle...</span>
-				<br />
-				<div style="float:left;color:grey;"><i>4 more answers</i></div>
-			</div>
-		</div>
-	</a>
-
-	<a href="{{ url_for("question_detail") }}">
-		<div class="ui segment">
-			<div class="content">
-				<div style="float:left;"><h3>
-					What happened with ants in 2015??
-				</h3></div>
-				<div style="float:right;"><i>3d ago</i></div>
-				<br />
-				<br />
-				<span style="float:left;">God fucking damn it Jerry you we don't talk about ...</span>
-				<br />
-				<div style="float:left;color:grey;"><i>67 more answers</i></div>
-			</div>
-		</div>
-	</a>
-
-	<a href="{{ url_for("question_detail") }}">
-		<div class="ui segment">
-			<div class="content">
-				<div style="float:left;"><h3>
-					Who took my sandwich
-				</h3></div>
-				<div style="float:right;"><i>1w ago</i></div>
-				<br />
-				<br />
-				<span style="float:left;">It was me.</span>
-				<br />
-				<div style="float:left;color:grey;"><i>No more answers</i></div>
-			</div>
-		</div>
-	</a>
+{% endfor %}
 
 </div>
 {% endblock %}
