@@ -18,17 +18,26 @@
 </script>
 
 
-<h1>These questions need some answers!</h1>
+<h1 style="color:#697178;text-align:center;">Every question needs an answer.</h1>
 
 <div class="ui segments">
 	{% for qn in data %}
 	<a href="{{ url_for("answer_detail") }}?id={{ qn.q_id }}">
 		<div class="ui segment">
 			<div class="content question" value="{{ qn.q_id }}">
-				<div style="float:left;"><h3>
-					{{ qn.question_title }}
-				</h3></div>
+				<div style="float:left;">
+					<h3>
+						{{ qn.question_title }}
+					</h3>
+				</div>
 				<br></br>
+				<div style="float:left;color:grey;">
+					<i>Categories:
+					{% for cat in qn.assigned_to %}
+						{{ cat }} 
+					{% endfor %}
+					</i>
+				</div>
 			</div>
 		</div>
 		</a>
