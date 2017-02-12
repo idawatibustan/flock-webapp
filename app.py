@@ -4,6 +4,7 @@ from pprint import pprint
 from settings import *
 from helper import *
 from fuzzywuzzy import fuzz
+import requests
 import os
 import uuid
 import json
@@ -93,6 +94,8 @@ def answer_detail():
         question['answers'] += [body]
         question['is_answered'] = True
         save_question(question)
+        question['event_name'] = 'question.answered'
+        r = requests.post('http://45.55.9.70:8080/{}'.format('floqdoc'), data=json.dumps(question))
         return redirect(url_for("answers"))
         # return render_template("answers.html")
 
