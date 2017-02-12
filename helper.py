@@ -4,7 +4,7 @@ import json
 def get_questions(params=None):
     # takes in asker_id, q_id, and is_answered as param keys
     questions = json.loads(open('json/questions.json').read())
-    if params:
+    if params and type(params) == dict:
         for param, val in params.iteritems():
             questions = { q_id: obj for q_id, obj in questions.iteritems() if obj[param] == val }
     questions = [v for v in questions.values()]

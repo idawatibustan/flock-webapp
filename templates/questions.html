@@ -12,8 +12,10 @@
 </script>
 
 <div class="ui segments">
+
 {% for qn in data %}
-	<a href="{{ url_for("question_detail") }}?id={{ qn.q_id }}">
+{% set _url = url_for("question_detail") %}
+<a href="{{ _url + '?id=' + qn.q_id }}">
 		<div class="ui segment">
 			<div class="content">
 				<div style="float:left;"><h3>

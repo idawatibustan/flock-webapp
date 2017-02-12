@@ -34,9 +34,10 @@ def answers():
 @app.route("/question_detail", methods=['GET', 'POST'])
 def question_detail():
     if request.method == 'GET':
-        # q_id = dict(request.args)['id']
-        # question = get_question(q_id)
-        return render_template('question_detail.html',data=[])#, data=question)
+        q_id = dict(request.args)['id'][0]
+        params = { 'q_id': q_id }
+        question = get_questions(params)
+        return render_template('question_detail.html', data=question[0])
     elif request.method == 'POST':
         data = json.loads(request.data)
         pprint(data)
@@ -60,7 +61,7 @@ def question_detail():
 @app.route("/answer_detail", methods=['GET', 'POST'])
 def answer_detail():
     if request.method == 'GET':
-        params = { 'q_id': request.args['id'] }
+        params = { 'q_id': request.args['id'][0] }
         question = get_questions(params)[0]
         return render_template("answer_detail.html", data=question)
     elif request.method == 'POST':
@@ -76,7 +77,7 @@ def answer_detail():
 
 @app.route("/search")
 def search():
-    query = dict(request.args)['q']
+    query = dict(request.args)['q'][0]
     powersearch.update(query)
     result = powersearch.get_results()
     return json.dumps(result)
