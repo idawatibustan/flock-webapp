@@ -18,24 +18,28 @@
     </div>
     {% set _url = url_for("answer_detail") %}
 
-    <div class="ui multiple selection simple dropdown">
-        <input name="states" type="hidden">
-        <i class="dropdown icon"></i>
-        <div class="default text">Add Categories</div>
-        <div class="menu">
-            <div class="item" data-value="HR">Human Resources</div>
-            <div class="item" data-value="EN">Engineering</div>
-            <div class="item" data-value="MK">Marketing</div>
-            <div class="item" data-value="LB">Lobby</div>
-            <div class="item" data-value="AL">All</div>
+    <div style="padding-left:10px">
+        <div class="ui multiple selection simple dropdown">
+            <input name="states" type="hidden">
+            <i class="dropdown icon"></i>
+            <div class="default text">Add Categories</div>
+            <div class="menu">
+                <div class="item" data-value="HR">Human Resources</div>
+                <div class="item" data-value="EN">Engineering</div>
+                <div class="item" data-value="MK">Marketing</div>
+                <div class="item" data-value="LB">Lobby</div>
+                <div class="item" data-value="AL">All</div>
+            </div>
         </div>
     </div>
 
     <form action="{{ _url + '?id=' + data.q_id }}" method="post">
         <div class="field">
-            <div style="padding-left:10px">
-                <label>Your answer:</label>
-            </div>
+                <label>
+                    <div style="padding-left:10px">
+                        Your answer:
+                    </div>
+                </label>
             <textarea rows="20" cols="60" name="answer" id="answer"></textarea>
         </div>
 
