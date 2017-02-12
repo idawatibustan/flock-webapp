@@ -40,17 +40,24 @@ nav .simple.dropdown.item .menu a.item {
 
 .ui.search .prompt {
     border-radius: 0;
-    width: 218px;
+    width: 216px;
 }
 
 section.nav_container {
-    padding: 10px;
+    height: 60px;
 }
 
 section.nav_container > * {
-    display: inline-block;
+    display: block;
+    position: absolute;
+}
+
+section.nav_container > nav {
+    left: 10px;
+    top: 10px;
 }
 
 section.nav_container > div.ui.category.search {
-    margin-left: -4px;
+    left: 72px;
+    top: 9px;
 }
