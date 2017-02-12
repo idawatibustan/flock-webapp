@@ -18,7 +18,7 @@
 </script>
 
 
-<h1>These questions need some answers!</h1>
+<h1 style="color:#697178;">Every question needs an answer.</h1>
 
 <div class="ui segments">
 	{% for qn in data %}
@@ -32,10 +32,11 @@
 				</div>
 				<br></br>
 				<div style="float:left;color:grey;">
-					In categories:
+					<i>Categories:
 					{% for cat in qn.assigned_to %}
 						{{ cat }} 
 					{% endfor %}
+					</i>
 				</div>
 			</div>
 		</div>
