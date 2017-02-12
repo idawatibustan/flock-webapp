@@ -27,12 +27,6 @@
 				</h3></div>
 				<br></br>
 				<div>
-				{% for i in range(qn.rank) %}
-				<i class="money green icon"></i>
-				{% endfor %}
-				</div>
-
-				<div>
 				<span style="float:left;position:relative;">
 					{% if qn.answers[0]|length <= 80 %}
 					{{ qn.answers[0] }}
@@ -48,6 +42,11 @@
 				{% else %}
 				<i> {{ qn.answers|length }} Answers</i></div>
 				{% endif %}
+				<div style='float: right;'>
+				{% for i in range(qn.rank) %}
+				<i class="money green icon"></i>
+				{% endfor %}
+				</div>
 			</div>
 		</div>
 	</a>
