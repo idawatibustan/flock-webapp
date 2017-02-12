@@ -5,6 +5,7 @@
     <!-- Custom -->
     <meta name="viewport" content="initial-scale=1">
     <link rel="stylesheet" href="{{ url_for("static", filename="style.css") }}">
+    <link rel="stylesheet" href="{{ url_for("static", filename="proxima-nova.css") }}">
     <script src="{{ url_for("static", filename="script.js") }}"></script>
 
     <!-- Semantic UI -->
@@ -15,9 +16,22 @@
     {% endblock %}
 </head>
 <body>
-    <nav>
-        <a href="{{ url_for("ask") }}">ask</a>
-        <a href="{{ url_for("answer") }}">answer</a>
+    <nav class="ui compact menu">
+      <div class="ui simple dropdown item">
+        {% if active_page == "ask" %}
+            Q
+        {% else %}
+            A
+        {% endif %}
+        <i class="dropdown icon"></i>
+        <div class="menu">
+            {% if active_page == "ask" %}
+                <a href="{{ url_for("answer") }}" class="item">A</a>
+            {% else %}
+                <a href="{{ url_for("ask") }}" class="item">Q</a>
+            {% endif %}
+        </div>
+      </div>
     </nav>
     <section class="content">
         {% block body %}
