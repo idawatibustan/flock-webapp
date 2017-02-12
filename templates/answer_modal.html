@@ -1,15 +1,44 @@
-{% extends "base.html" %}
-{% set active_page = "answer" %}
-{% block head %}
-{% endblock %}
-{% block body %}
+<head>
+    <title>floQdoc</title>
 
+    <!-- Semantic UI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/dropdown.min.js"></script>
 
-<div class="ui inverted menu">
-	<div class="header item">Answer</div>
-	<div class="ui secondary right menu">
-		<div class="item">asdf</div>
-		<i class="inverted remove icon"></i>
+    <!-- Custom -->
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for("static", filename="style.css") }}">
+    <link rel="stylesheet" href="{{ url_for("static", filename="proxima-nova.css") }}">
+    <script src="{{ url_for("static", filename="script.js") }}"></script>
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+
+<div class="ui form">
+	<h2>How do I request days off?</h1>
+	<div class="field">
+		<div class="ui multiple selection simple dropdown" id="multi-select">
+			<input type="hidden" name="tag">
+			<i class="dropdown icon"></i>
+			<div class="default text">Enter tags here</div>
+			<div class="menu">
+				<div class="item" data-value="HR">Human Resources</div>
+				<div class="item" data-value="ENG">Engineering</div>
+				<div class="item" data-value="MAR">Marketing</div>
+			</div>
+		</div>
 	</div>
+
+	<div class="field">
+		<label>Your answer:</label>
+		<textarea rows="20" cols="60"></textarea>
+	</div>
+
+	<div class="ui right floated green button">Answer</div>
+	<div class="ui right floated grey button">Forward</div>
 </div>
-{% endblock %}
+</body>

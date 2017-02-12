@@ -8,4 +8,7 @@ $(document)
       },
       type: 'category'
   });
+
+  $('.ui.dropdown')
+   .dropdown();
 });
