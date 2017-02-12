@@ -2,6 +2,10 @@ html {
     font-family: "Proxima Nova", "Arial", sans-serif;
 }
 
+body {
+    min-width: 0!important;
+}
+
 .ui.segment {
 	width: 100%;
 }
