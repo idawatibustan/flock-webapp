@@ -44,7 +44,10 @@
 				{% endif %}
 				<div style='float: right;'>
 				{% for i in range(qn.rank) %}
-				<i class="money green icon"></i>
+				<i class="star green icon"></i>
+				{% endfor %}
+				{% for i in range(qn.rank,5) %}
+				<i class="empty star green icon"></i>
 				{% endfor %}
 				</div>
 			</div>
