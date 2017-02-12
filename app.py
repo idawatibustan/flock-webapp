@@ -22,7 +22,12 @@ def home():
 
 @app.route("/questions")
 def questions():
-    session['data'] = dict(request.args)
+    try:
+        data = dict(request.args)
+        session_data = json.loads(session['data']['flockEvent'][0])
+        session['data'] = session_data
+    except:
+        pass
     print "SESSION['DATA']", session['data']
     params = { 'is_answered': True }
     questions = get_questions(params)
@@ -41,8 +46,7 @@ def question_detail():
         if q_id == "0000":
             question_title = dict(request.args)['title'][0]
             assigned_to = ['Engineering','Marketing','Human Resources']
-            session_data = session['data']
-            print "SESSION_DATA", session_data
+            # session_data = json.loads(session['data']['flockEvent'][0])
             q_id = str(uuid.uuid4())
             new_question = {
                 'question_title': question_title,
@@ -64,7 +68,7 @@ def question_detail():
         pprint(data)
         question_title = data['title']
         assigned_to = data['assigned_to']
-        session_data = session['data']['flockEvent']
+        # session_data = json.loads(session['data']['flockEvent'][0])
         q_id = str(uuid.uuid4())
         new_question = {
             'question_title': question_title,
