@@ -1,73 +1,40 @@
 {
-    "f887ae61-ff83-4378-b39a-e83450391537": {
+    "27aad35f-be35-4ef9-8279-4fec59e8811d": {
         "is_answered": true, 
-        "rank": 0, 
-        "q_id": "f887ae61-ff83-4378-b39a-e83450391537", 
-        "question_title": "Where should I go to update my personal data?", 
+        "rank": 4, 
+        "q_id": "27aad35f-be35-4ef9-8279-4fec59e8811d", 
+        "question_title": "When do we need to submit our timesheet?", 
         "answers": [
-            "You can do so on your JIRA account.", 
-            "use settings on JIRA"
-        ], 
-        "asker_id": "u:grb5by5xxoo7plbb", 
-        "assigned_to": [
-            "Human Resources"
-        ]
-    }, 
-    "ffc66f99-9d84-44de-b7d9-28a4dc1b8971": {
-        "is_answered": true, 
-        "rank": 2, 
-        "q_id": "ffc66f99-9d84-44de-b7d9-28a4dc1b8971", 
-        "question_title": "How do I apply for time off?", 
-        "answers": [
-            "tell HR at least 2 weeks beforehand", 
-            "You have to submit the appropriate paperwork to HR at least 2 weeks in advance. I think you can find it on the company site under \"Employee Resources\" tab.", 
-            "You can also email HR. Make sure your supervisor is notified of your intent to take a vacation at least 2-3 weeks before, and that you take care of all the work that you need to do before you leave (obviously). Also make sure you don't leave any edible content in your drawers! We don't want a repeat of the ants incident 2k15.", 
-            "Everyday is a day off when you love your work!"
-        ], 
-        "asker_id": "u:grb5by5xxoo7plbb", 
-        "assigned_to": [
-            "Human Resources"
-        ]
-    }, 
-    "d0e1bbeb-a3ab-48fb-a9dc-373c1dd1f09d": {
-        "is_answered": true, 
-        "rank": 1, 
-        "q_id": "d0e1bbeb-a3ab-48fb-a9dc-373c1dd1f09d", 
-        "question_title": "How many days of leave are we entitled to?", 
-        "answers": [
-            "I wouldn't say so much 'entitled' as 'obliged'. We can have unlimited paid days of leave... given that we finish our work first!", 
-            "no amount but id say around 2 months each year is pretty safe", 
-            "I usually only take the winter holidays off. There's always so much to do at work."
+            "Timesheets need to be turned in every other Monday before 12pm. You will receive reminders from your supervisor to do so.", 
+            "Be sure to submit it on time so you get paid on time!"
         ], 
         "asker_id": "u:1lflyiir1liy1yg1", 
         "assigned_to": [
             "Human Resources"
         ]
     }, 
+    "f0620f10-55af-4f45-abe3-a9918e26c29a": {
+        "is_answered": false, 
+        "rank": 0, 
+        "q_id": "f0620f10-55af-4f45-abe3-a9918e26c29a", 
+        "question_title": "How much time do I get for maternity leave?", 
+        "asker_id": "u:1lflyiir1liy1yg1", 
+        "answers": [], 
+        "assigned_to": [
+            "Human Resources"
+        ]
+    }, 
     "71d75a26-c6f9-4ee7-a359-ce887018c3e6": {
         "is_answered": true, 
-        "rank": 0, 
+        "rank": 5, 
         "q_id": "71d75a26-c6f9-4ee7-a359-ce887018c3e6", 
         "question_title": "Where can I find documentations for the company\u2019s code review, standards and other tech debt guidelines?", 
+        "asker_id": "u:tejieggyt3eqe7ts", 
         "answers": [
             "You can find them on the company confluence page -- you should have access to the page via the login information available on your trainee packet. If you're still not sure, feel free to swing by and visit me at cubicle 219!"
         ], 
-        "asker_id": "u:tejieggyt3eqe7ts", 
         "assigned_to": [
             "Engineering"
-        ]
-    }, 
-    "43693b91-4f1e-4e2a-aa2c-c75cba532f07": {
-        "is_answered": true, 
-        "rank": 0, 
-        "q_id": "43693b91-4f1e-4e2a-aa2c-c75cba532f07", 
-        "question_title": "What is the company payroll schedule like?", 
-        "answers": [
-            "Direct deposit is scheduled for once every two weeks."
-        ], 
-        "asker_id": "u:j55g5dg6jj6sgpv6", 
-        "assigned_to": [
-            "Human Resources"
         ]
     }, 
     "58cdb480-9539-42d0-b3ad-49dba53fc6df": {
@@ -75,48 +42,170 @@
         "rank": 0, 
         "q_id": "58cdb480-9539-42d0-b3ad-49dba53fc6df", 
         "question_title": "What do I need to install to set up my development environment?", 
-        "answers": [], 
         "asker_id": "u:e9q3qfqfifqfw3qr", 
+        "answers": [], 
         "assigned_to": [
             "Engineering"
         ]
     }, 
-    "b9c74e1e-c8fb-49e5-9f89-7faaf5df06bb": {
+    "f9a5a022-c372-4f7f-ae9f-894a3a8e144a": {
         "is_answered": true, 
-        "rank": 0, 
-        "q_id": "b9c74e1e-c8fb-49e5-9f89-7faaf5df06bb", 
-        "question_title": "How do I go about claiming my expenses?", 
+        "rank": 3, 
+        "q_id": "f9a5a022-c372-4f7f-ae9f-894a3a8e144a", 
+        "question_title": "Where do I access payroll information", 
+        "asker_id": "u:1lflyiir1liy1yg1", 
         "answers": [
-            "We have several methods available to our employees "
+            "You can access your payroll information by logging into trident, then click on My Profile > Payroll Details to receive information"
         ], 
-        "asker_id": "u:j55g5dg6jj6sgpv6", 
         "assigned_to": [
             "Human Resources"
         ]
     }, 
-    "f9a5a022-c372-4f7f-ae9f-894a3a8e144a": {
-        "is_answered": true, 
+    "617510b2-3ea9-4b23-9161-5c5619bc2692": {
+        "is_answered": false, 
         "rank": 0, 
-        "q_id": "f9a5a022-c372-4f7f-ae9f-894a3a8e144a", 
-        "question_title": "Where do I access payroll information", 
+        "q_id": "617510b2-3ea9-4b23-9161-5c5619bc2692", 
+        "question_title": "Where can I find a collection of all my benefits?", 
+        "asker_id": "u:1lflyiir1liy1yg1", 
+        "answers": [], 
+        "assigned_to": [
+            "Human Resources"
+        ]
+    }, 
+    "e7ec955e-6d27-4595-be98-dcb6f7c34a0b": {
+        "is_answered": true, 
+        "rank": 5, 
+        "q_id": "e7ec955e-6d27-4595-be98-dcb6f7c34a0b", 
+        "question_title": "What holidays/vacations will be observed in 2017?", 
         "answers": [
-            "From the 7th level of hell"
+            "The following federal holidays will be observed in 2017:\r\n\r\nNew Year's Day: January 1\r\nInauguration Day: January 20\r\nMartin Luther King, Jr. Day: Third Monday in January\r\nGeorge Washington\u2019s Birthday: Third Monday in February\r\nMemorial Day: Last Monday in May\r\nIndependence DayJuly 4\r\nLabor Day: First Monday in September\r\nColumbus Day: Second Monday in October\r\nVeterans Day: November 11\r\nThanksgiving Day: 4th Thursday in November\r\nChristmas Day: December 25"
+        ], 
+        "asker_id": "u:grb5by5xxoo7plbb", 
+        "assigned_to": [
+            "Engineering", 
+            "Marketing", 
+            "Human Resources"
+        ]
+    }, 
+    "82e1c57b-ab31-48cd-8b90-518969fd59eb": {
+        "is_answered": false, 
+        "rank": 0, 
+        "q_id": "82e1c57b-ab31-48cd-8b90-518969fd59eb", 
+        "question_title": "I reset my password on JIRA. Why can\u2019t I log in yet?", 
+        "answers": [], 
+        "asker_id": "u:1lflyiir1liy1yg1", 
+        "assigned_to": [
+            "Engineering", 
+            "Marketing", 
+            "Human Resources"
+        ]
+    }, 
+    "ffc66f99-9d84-44de-b7d9-28a4dc1b8971": {
+        "is_answered": true, 
+        "rank": 4, 
+        "q_id": "ffc66f99-9d84-44de-b7d9-28a4dc1b8971", 
+        "question_title": "How do I apply for time off?", 
+        "asker_id": "u:grb5by5xxoo7plbb", 
+        "answers": [
+            "You have to submit the appropriate paperwork to HR at least 2 weeks in advance. I think you can find it on the company site under \"Employee Resources\" tab.", 
+            "You can also email HR. Make sure your supervisor is notified of your intent to take a vacation at least 2-3 weeks before, and that you take care of all the work that you need to do before you leave (obviously). Also make sure you don't leave any edible content in your drawers! We don't want a repeat of the ants incident 2k15.", 
+            "Everyday is a day off when you love your work!"
+        ], 
+        "assigned_to": [
+            "Human Resources"
+        ]
+    }, 
+    "6660d673-a6eb-44f1-8bcd-35cdf7808cf7": {
+        "is_answered": true, 
+        "rank": 4, 
+        "q_id": "6660d673-a6eb-44f1-8bcd-35cdf7808cf7", 
+        "question_title": "I\u2019m an intern. What do I do when my supervisor isn\u2019t here?", 
+        "asker_id": "u:1lflyiir1liy1yg1", 
+        "answers": [
+            "You can also just use this time to continue pursue some self-study and get a head start on your next project.", 
+            "There\u2019s always lots to do in the office, so when you find yourself with no tasks for the day, feel free to swing by any of the senior cubicles! We will most likely have many tasks to keep you busy.", 
+            "The engineers on floor two can always use an extra hand."
+        ], 
+        "assigned_to": [
+            "Engineering", 
+            "Marketing", 
+            "Human Resources"
+        ]
+    }, 
+    "b9c74e1e-c8fb-49e5-9f89-7faaf5df06bb": {
+        "is_answered": true, 
+        "rank": 1, 
+        "q_id": "b9c74e1e-c8fb-49e5-9f89-7faaf5df06bb", 
+        "question_title": "How do I go about claiming my expenses?", 
+        "asker_id": "u:j55g5dg6jj6sgpv6", 
+        "answers": [
+            "We have several methods available to our employees "
+        ], 
+        "assigned_to": [
+            "Human Resources"
+        ]
+    }, 
+    "f93b0dbd-7fea-436e-ad30-ab810fae1e7b": {
+        "is_answered": false, 
+        "rank": 0, 
+        "q_id": "f93b0dbd-7fea-436e-ad30-ab810fae1e7b", 
+        "question_title": "What if I can\u2019t make it to a meeting?", 
+        "answers": [], 
+        "asker_id": "u:1lflyiir1liy1yg1", 
+        "assigned_to": [
+            "Engineering"
+        ]
+    }, 
+    "d0e1bbeb-a3ab-48fb-a9dc-373c1dd1f09d": {
+        "is_answered": true, 
+        "rank": 2, 
+        "q_id": "d0e1bbeb-a3ab-48fb-a9dc-373c1dd1f09d", 
+        "question_title": "How many days of leave are we entitled to?", 
+        "asker_id": "u:1lflyiir1liy1yg1", 
+        "answers": [
+            "I wouldn't say so much 'entitled' as 'obliged'. We can have unlimited paid days of leave... given that we finish our work first!", 
+            "No amount but I'd say around 2 months each year is pretty safe", 
+            "I usually only take the winter holidays off. There's always so much to do at work."
+        ], 
+        "assigned_to": [
+            "Human Resources"
+        ]
+    }, 
+    "43693b91-4f1e-4e2a-aa2c-c75cba532f07": {
+        "is_answered": true, 
+        "rank": 3, 
+        "q_id": "43693b91-4f1e-4e2a-aa2c-c75cba532f07", 
+        "question_title": "What is the company payroll schedule like?", 
+        "asker_id": "u:j55g5dg6jj6sgpv6", 
+        "answers": [
+            "Direct deposit is scheduled for once every two weeks."
+        ], 
+        "assigned_to": [
+            "Human Resources"
+        ]
+    }, 
+    "c92914ff-fef9-4779-92c5-3ee22c63de90": {
+        "is_answered": true, 
+        "rank": 4, 
+        "q_id": "c92914ff-fef9-4779-92c5-3ee22c63de90", 
+        "question_title": "What is Donut Friday?", 
+        "answers": [
+            "Donut Friday is when a colleague brings in donuts on a Friday! Everybody chips in and person that doesn\u2019t chip in will be in charge of donuts for next Friday."
         ], 
         "asker_id": "u:1lflyiir1liy1yg1", 
         "assigned_to": [
+            "Engineering", 
+            "Marketing", 
             "Human Resources"
         ]
     }, 
     "bbe185aa-dc5a-404d-94ff-5a2a55727ebe": {
-        "is_answered": true, 
+        "is_answered": false, 
         "rank": 0, 
         "q_id": "bbe185aa-dc5a-404d-94ff-5a2a55727ebe", 
         "question_title": "Where do I find information on our database schema?", 
-        "answers": [
-            "asdf", 
-            "and also, qwerty"
-        ], 
         "asker_id": "u:1lflyiir1liy1yg1", 
+        "answers": [], 
         "assigned_to": [
             "Engineering"
         ]
@@ -126,8 +215,88 @@
         "rank": 0, 
         "q_id": "3468e7d1-bb78-49b6-87f5-549113304bdc", 
         "question_title": "What employee benefits am I entitled to?", 
-        "answers": [], 
         "asker_id": "u:kwuaff9sootkzzat", 
+        "answers": [], 
+        "assigned_to": [
+            "Human Resources"
+        ]
+    }, 
+    "d1245e21-0051-497a-b8c5-0755812dd08d": {
+        "is_answered": true, 
+        "rank": 4, 
+        "q_id": "d1245e21-0051-497a-b8c5-0755812dd08d", 
+        "question_title": "What are company dress code policies?", 
+        "asker_id": "u:1lflyiir1liy1yg1", 
+        "answers": [
+            "We take pride in being a tech company that gets things done, so there\u2019s no need to dress formally every day. As long as you are here and you make a difference, it matters less how you dress, but more what you do.", 
+            "I would suggest t-shirts for men and blouses for women, and jeans and long pants for both men and women."
+        ], 
+        "assigned_to": [
+            "Marketing", 
+            "Human Resources"
+        ]
+    }, 
+    "010c2cb1-a25d-4610-be38-e590cf2f3167": {
+        "is_answered": true, 
+        "rank": 3, 
+        "q_id": "010c2cb1-a25d-4610-be38-e590cf2f3167", 
+        "question_title": "Who should I report to when I need to take a sick day?", 
+        "answers": [
+            "You should always report first to your direct supervisor at least 24 hours in advance. You also may want to let your teammates know ahead of time so that there is no disruption in the workflow of your project."
+        ], 
+        "asker_id": "u:1lflyiir1liy1yg1", 
+        "assigned_to": [
+            "Engineering", 
+            "Human Resources"
+        ]
+    }, 
+    "7ab92199-cf0b-4be5-91b1-f518997b061d": {
+        "is_answered": true, 
+        "rank": 5, 
+        "q_id": "7ab92199-cf0b-4be5-91b1-f518997b061d", 
+        "question_title": "How many days of leave do employees get in 2017?", 
+        "answers": [
+            "Employees are entitled to 12 days of paid leave this year.\r\nAccording to NCSL: Employees who have worked for an employer for one year for an average of 30 or more hours per week. Up to 12 weeks in 12 months for parental or family leave. Allows the employee to substitute available sick, vacation, or other paid leave, not to exceed 6 weeks."
+        ], 
+        "asker_id": "u:grb5by5xxoo7plbb", 
+        "assigned_to": [
+            "Engineering", 
+            "Marketing", 
+            "Human Resources"
+        ]
+    }, 
+    "f887ae61-ff83-4378-b39a-e83450391537": {
+        "is_answered": true, 
+        "rank": 4, 
+        "q_id": "f887ae61-ff83-4378-b39a-e83450391537", 
+        "question_title": "Where should I go to update my personal data?", 
+        "asker_id": "u:grb5by5xxoo7plbb", 
+        "answers": [
+            "You can do so on your JIRA account.", 
+            "Use settings on JIRA"
+        ], 
+        "assigned_to": [
+            "Human Resources"
+        ]
+    }, 
+    "469322b1-f827-445b-a6dc-2037805450ff": {
+        "is_answered": false, 
+        "rank": 0, 
+        "q_id": "469322b1-f827-445b-a6dc-2037805450ff", 
+        "question_title": "Where can I find meeting minutes after attending a meeting?", 
+        "asker_id": "u:1lflyiir1liy1yg1", 
+        "answers": [], 
+        "assigned_to": [
+            "Marketing"
+        ]
+    }, 
+    "78acd8a4-cdd5-4869-9bed-170c04524137": {
+        "is_answered": false, 
+        "rank": 0, 
+        "q_id": "78acd8a4-cdd5-4869-9bed-170c04524137", 
+        "question_title": "Where can I apply for an employee parking pass?", 
+        "asker_id": "u:1lflyiir1liy1yg1", 
+        "answers": [], 
         "assigned_to": [
             "Human Resources"
         ]
