@@ -71,6 +71,7 @@ class Powersearch:
         self.questions = {}
         self.scores = {}
         self.num_words = 0
+        self.query = ''
 
     def _reload_questions(self):
         self.questions = json.loads(open('json/questions.json').read())
@@ -89,6 +90,7 @@ class Powersearch:
         return d
 
     def update(self, query):
+        self.query = query
         if not self.questions:
             self._reload_questions()
         self.num_words = len(query[0].split(' '))
@@ -122,12 +124,12 @@ class Powersearch:
                     "results": unanswered
                 },
                 "submit": {
-                    "name": "New",
+                    "name": "New Question",
                     "results": [
                         {
-                          "title": "Result Title",
-                          "url": "/optional/url/on/click",
-                          "description": "Optional Description"
+                          "title": self.query,
+                          "url": "/question_detail?id=0000&title="+str(self.query),
+                          "description": "Click to submit"
                         }
                     ]
                 },
