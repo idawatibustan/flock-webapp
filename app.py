@@ -3,6 +3,7 @@ from gevent.wsgi import WSGIServer
 from pprint import pprint
 from settings import *
 import os
+import uuid
 import json
 
 app = Flask(__name__)
@@ -10,69 +11,65 @@ app.secret_key = os.urandom(24).encode("hex")
 
 @app.route("/", methods=["GET", "POST"])
 def home():
-    # TODO: kyle - check if redirect is still a problem, if so shift to /ask
+    # TODO: check why redirect urls don't fucking work
     session['data'] = dict(request.args)
     print json.dumps(session['data'], indent=4)
     return redirect(url_for("questions"))
 
 @app.route("/questions")
 def questions():
-    # TODO: kyle
-    #questions = get_questions(user_id, is_answered = False)
-    return render_template("questions.html", data={})
+    params = { 'is_answered': False }
+    questions = get_questions(params)
+    return render_template("questions.html", data=questions)
 
 @app.route("/answers")
 def answers():
-    # TODO: lily
-    #questions = get_questions(user_id, is_answered=True)
-    return render_template("answers.html", data={})
+    params = { 'is_answered': True }
+    questions = get_questions(params)
+    return render_template("answers.html", data=questions)
 
 @app.route("/question_detail", methods=['GET', 'POST'])
 def question_detail():
-    # TODO: kyle
     if request.method == 'GET':
-        # get means that you are viewing a question that has been posted but
-        # not answered
-        pass
-        #args = dict(request.args)
-        #question_obj = get_question(id)
-        #return render_template('question.html', obj=question_obj)
-        return render_template('question_detail.html', data={})
+        q_id = dict(request.args)['id']
+        question = get_question(q_id)
+        return render_template('question_detail.html', data=question)
     elif request.method == 'POST':
         data = json.loads(request.data)
         pprint(data)
         question_title = data['title']
         assigned_to = data['assigned_to']
+        session_data = session['data']['flockEvent']
+        q_id = str(uuid.uuid4())
         new_question = {
             'question_title': question_title,
-            'assigned_to': [],
+            'assigned_to': assigned_to,
             'is_answered': False,
             'answers': [],
             'rank': 0,
-            'q_id': '1298370123',
-            'asker_id': 'u:12938704'
+            'q_id': q_id,
+            'asker_id': session_data['userId']
         }
         save_question(new_question)
-        return "This is the question details page"
+        # return redirect(url_for('questions'))
+        return render_template("questions.html")
 
 @app.route("/answer_detail", methods=['GET', 'POST'])
 def answer_detail():
-    # TODO: andre
     if request.method == 'GET':
-        # q_id = request.args['id']
-        #question = get_questions(q_id)
-        return render_template("answer_detail.html", data={})
+        params = { 'q_id': request.args['id'] }
+        question = get_questions(params)[0]
+        return render_template("answer_detail.html", data=question)
     elif request.method == 'POST':
         data = json.loads(request.data)
         q_id, body = data['id'], data['body']
-        #question = get_questions(q_id)
-        if len(question['answers']) == 0:
-            question['answers'] = [question]
-        else:
-            question['answers'].append(question)
+        params = { 'q_id': q_id }
+        question = get_questions(params)
+        question['answers'] += [body]
         question['is_answered'] = True
         save_question(question, q_id)
-        return 'ok'
+        # return redirect(url_for('answers'))
+        return render_template("answers.html")
 
 @app.route("/search")
 def search():
