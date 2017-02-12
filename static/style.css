@@ -28,3 +28,24 @@ nav .simple.dropdown.item .menu a.item {
     border: none;
     font-weight: bold;
 }
+
+.ui.menu,
+.ui.search {
+    display: inline-block;
+}
+
+.ui.search .prompt {
+    border-radius: 0;
+}
+
+section.nav_container {
+    padding: 10px;
+}
+
+section.nav_container > * {
+    display: inline-block;
+}
+
+section.nav_container > div.ui.category.search {
+    margin-left: -4px;
+}
