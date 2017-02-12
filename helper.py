@@ -1,3 +1,5 @@
+import json
+
 def get_questions(params=None):
     # takes in asker_id, q_id, and is_answered as param keys
     questions = json.loads(open('json/questions.json').read())
