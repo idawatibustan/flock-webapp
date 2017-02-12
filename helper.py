@@ -93,7 +93,7 @@ class Powersearch:
     def update(self, query):
         if not self.questions:
             self._reload_questions()
-            if query == '':
+            if len(query) < 3:
                 self._reinitialize()
             else:
                 self.num_words = len(query[0].split(' '))
