@@ -1,13 +1,11 @@
 def get_questions(params=None):
+    # takes in asker_id, q_id, and is_answered as param keys
     questions = json.loads(open('json/questions.json').read())
-    #TODO
     if params:
-        if 'q_id' in params:
-            return questions['q_id']
-        else:
-            for param in params.keys():
-                questions = filter_by(param)
-            sophisticated_sort(res)
+        for param, val in params.iteritems():
+            questions = [question for question in questions if question[param] == val]
+        sophisticated_sort(res)
+        questions = sorted(questions, key=lambda x: x['rank'], reverse=True)
     return questions
 
 def process_query(query):
