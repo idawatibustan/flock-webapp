@@ -7,8 +7,9 @@
 <script src="{{ url_for("static", filename="flock.js") }}"></script>
 <script>
 	$(document).ready(function() {
-		$("#btn").click(function() {
+		$("#question").click(function() {
 			var id = $(this).attr('value');
+			console.log(id);
 			flock.openWidget("{{ url_for("answer_detail") }}?id="+id, 'modal');
 		});
 	});
@@ -22,11 +23,9 @@
 	{% for qn in data %}
 	<!-- <a href="{{ url_for("answer_detail") }}"> -->
 		<div class="ui segment">
-			<div class="content">
+			<div class="content" id="question" value="{{ qn.q_id }}">
 				<div style="float:left;"><h3>
-				<button id="btn" type="submit" name="question" value="{{ qn.q_id }}">
 					Where can I contact building facility managers?
-				</button>
 				</h3></div>
 				<div style="float:right;"><i>2hr ago</i></div>
 				
