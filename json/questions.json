@@ -15,7 +15,7 @@
     }, 
     "ffc66f99-9d84-44de-b7d9-28a4dc1b8971": {
         "is_answered": true, 
-        "rank": 0, 
+        "rank": 2, 
         "q_id": "ffc66f99-9d84-44de-b7d9-28a4dc1b8971", 
         "question_title": "How do I apply for time off?", 
         "answers": [
@@ -31,7 +31,7 @@
     }, 
     "d0e1bbeb-a3ab-48fb-a9dc-373c1dd1f09d": {
         "is_answered": true, 
-        "rank": 0, 
+        "rank": 1, 
         "q_id": "d0e1bbeb-a3ab-48fb-a9dc-373c1dd1f09d", 
         "question_title": "How many days of leave are we entitled to?", 
         "answers": [
@@ -86,7 +86,9 @@
         "rank": 0, 
         "q_id": "b9c74e1e-c8fb-49e5-9f89-7faaf5df06bb", 
         "question_title": "How do I go about claiming my expenses?", 
-        "answers": [], 
+        "answers": [
+            "We have several methods available to our employees "
+        ], 
         "asker_id": "u:j55g5dg6jj6sgpv6", 
         "assigned_to": [
             "Human Resources"
@@ -97,7 +99,9 @@
         "rank": 0, 
         "q_id": "f9a5a022-c372-4f7f-ae9f-894a3a8e144a", 
         "question_title": "Where do I access payroll information", 
-        "answers": [], 
+        "answers": [
+            "From the 7th level of hell"
+        ], 
         "asker_id": "u:1lflyiir1liy1yg1", 
         "assigned_to": [
             "Human Resources"
