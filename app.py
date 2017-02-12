@@ -45,7 +45,6 @@ def question_detail():
         if q_id == "0000":
             question_title = dict(request.args)['title'][0]
             assigned_to = ['Engineering','Marketing','Human Resources']
-            if()
             # session_data = json.loads(session['data']['flockEvent'][0])
             q_id = str(uuid.uuid4())
             new_question = {
