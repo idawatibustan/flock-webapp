@@ -7,10 +7,12 @@
 <script src="{{ url_for("static", filename="flock.js") }}"></script>
 <script>
 	$(document).ready(function() {
-		$("#question").click(function() {
-			var id = $(this).attr('value');
+		$(".question").click(function() {
+			var id = $(this).attr('value'),
+                url = "https://devweek.kyletan.me{{ url_for("answer_detail") }}?id=" + id;
 			console.log(id);
-			flock.openWidget("{{ url_for("answer_detail") }}?id="+id, 'modal');
+			flock.openWidget(url, 'modal');
+            window.location.href = url;
 		});
 	});
 </script>
@@ -22,7 +24,7 @@
 	{% for qn in data %}
 	<a href="{{ url_for("answer_detail") }}?id={{ qn.q_id }}">
 		<div class="ui segment">
-			<div class="content" id="question" value="{{ qn.q_id }}">
+			<div class="content question" value="{{ qn.q_id }}">
 				<div style="float:left;"><h3>
 					{{ qn.question_title }}
 				</h3></div>
