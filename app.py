@@ -77,7 +77,42 @@ def search():
     # TODO: ida
     # TODO: flock.js
     query = dict(request.args)['q']
-    result = process_query(query)
+    # result = process_query(query)
+    result = {
+      "results": {
+        "category1": {
+          "name": "Category 1",
+          "results": [
+            {
+              "title": "Result Title",
+              "url": "/optional/url/on/click",
+              "image": "optional-image.jpg",
+              "price": "Optional Price",
+              "description": "Optional Description"
+            },
+            {
+              "title": "Result Title",
+              "url": "/optional/url/on/click",
+              "image": "optional-image.jpg",
+              "price": "Optional Price",
+              "description": "Optional Description"
+            }
+          ]
+        },
+        "category2": {
+          "name": "Category 2",
+          "results": [
+            {
+              "title": "Result Title",
+              "url": "/optional/url/on/click",
+              "image": "optional-image.jpg",
+              "price": "Optional Price",
+              "description": "Optional Description"
+            }
+          ]
+        }
+      }
+    }
     return json.dumps(result)
 
 if __name__ == "__main__":
