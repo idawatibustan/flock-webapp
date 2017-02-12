@@ -1,0 +1,17 @@
+{
+    "138274012": {
+        "question_title": "How do i take leave?",
+        "assigned_to": ["Marketing", "Engineering"],
+        "is_answered": true,
+        "answers": [
+            "Go to this webpage and do that",
+            "Ask Josh from HR"
+        ]
+    },
+    "380974389750": {
+        "question_title": "Is president day a holiday for us?",
+        "assigned_to": ["Human Resources"],
+        "is_answered": false,
+        "answers": []
+    }
+}
