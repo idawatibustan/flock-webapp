@@ -4,18 +4,38 @@
 {% endblock %}
 {% block body %}
 
-<div class="ui basic menu">
-    <a class="header item" href="{{ url_for("answers") }}">Back</a>
+<div class="ui secondary basic menu">
+    <a class="item" href="{{ url_for("answers") }}">
+        <i class="reply icon"></i>
+        Back
+    </a>
 </div>
 
 <div class="ui form">
     {% set data = data[0] %}
-	<h2>{{ data.question_title }}</h1>
-    
+    <div style="padding-left:10px">
+        <h2>{{ data.question_title }}</h2>
+    </div>
     {% set _url = url_for("answer_detail") %}
+
+    <div class="ui multiple selection simple dropdown">
+        <input name="states" type="hidden">
+        <i class="dropdown icon"></i>
+        <div class="default text">Add Categories</div>
+        <div class="menu">
+            <div class="item" data-value="HR">Human Resources</div>
+            <div class="item" data-value="EN">Engineering</div>
+            <div class="item" data-value="MK">Marketing</div>
+            <div class="item" data-value="LB">Lobby</div>
+            <div class="item" data-value="AL">All</div>
+        </div>
+    </div>
+
     <form action="{{ _url + '?id=' + data.q_id }}" method="post">
         <div class="field">
-            <label>Your answer:</label>
+            <div style="padding-left:10px">
+                <label>Your answer:</label>
+            </div>
             <textarea rows="20" cols="60" name="answer" id="answer"></textarea>
         </div>
 
