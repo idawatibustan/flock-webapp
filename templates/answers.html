@@ -8,7 +8,7 @@
 <script>
 	$("#btn").click(function() {
 		var qn_id = $(this).value;
-		flock.openWidget("{{ url_for("answer_detail", id = qn_id) }}", 'modal');
+		flock.openWidget("{{ url_for("answer_detail") }}?id="+qn_id, 'modal');
 	});
 </script>
 
