@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>floQdoc</title>
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for("static", filename="style.css") }}">
+    <script src="{{ url_for("static", filename="script.js") }}"></script>
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for("ask") }}">ask</a>
+        <a href="{{ url_for("answer") }}">answer</a>
+    </nav>
+    <section class="content">
+        {% block body %}
+        {% endblock %}
+    </section>
+</body>
+</html>
