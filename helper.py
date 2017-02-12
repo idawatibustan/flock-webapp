@@ -1,4 +1,5 @@
 from fuzzywuzzy import fuzz
+import time
 import json
 
 def get_questions(params=None):
@@ -74,18 +75,15 @@ class Powersearch:
     def _reload_questions(self):
         self.questions = json.loads(open('json/questions.json').read())
 
-    def _reinitialize(self):
-        self.scores = {}
-        self.num_words = 0
-
     def _set_score(self, _id, score):
         self.scores[_id] = score
 
-    def _enrich(self, obj):
+    def _enrich(self, obj, to_answer):
         _id, score = obj
+        base_url = 'answer_detail' if to_answer else 'question_detail'
         d = {
             "title": self.questions[_id]['question_title'],
-            "url": "/questions/{}".format(_id),
+            "url": "/{}?id={}".format(base_url, _id),
             "description": ', '.join(self.questions[_id]['assigned_to'])
         }
         return d
@@ -93,13 +91,10 @@ class Powersearch:
     def update(self, query):
         if not self.questions:
             self._reload_questions()
-            if query == '':
-                self._reinitialize()
-            else:
-                self.num_words = len(query[0].split(' '))
-                for _id, q in self.questions.iteritems():
-                    score = fuzz.token_sort_ratio(query, q['question_title'])
-                    self._set_score(_id, score)
+        self.num_words = len(query[0].split(' '))
+        for _id, q in self.questions.iteritems():
+            score = fuzz.token_sort_ratio(query, q['question_title'])
+            self._set_score(_id, score)
 
     def get_results(self, top=3):
         answered, unanswered = [], []
@@ -113,9 +108,9 @@ class Powersearch:
                 else:
                     unanswered.append((_id, score))
         answered = sorted(answered, key=lambda x: x[1], reverse=True)[:top]
-        answered = [self._enrich(i) for i in answered]
+        answered = [self._enrich(i, False) for i in answered]
         unanswered = sorted(unanswered, key=lambda x: x[1], reverse=True)[:top]
-        unanswered = [self._enrich(i) for i in unanswered]
+        unanswered = [self._enrich(i, True) for i in unanswered]
         result = {
             "results": {
                 "answered": {
@@ -132,12 +127,10 @@ class Powersearch:
                         {
                           "title": "Result Title",
                           "url": "/optional/url/on/click",
-                          "image": "optional-image.jpg",
-                          "price": "Optional Price",
                           "description": "Optional Description"
                         }
                     ]
-                }
+                },
             }
         }
         return result

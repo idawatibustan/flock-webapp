@@ -80,6 +80,7 @@ def search():
     query = dict(request.args)['q'][0]
     powersearch.update(query)
     result = powersearch.get_results()
+    print "hello" , result
     return json.dumps(result)
 
 if __name__ == "__main__":
