@@ -11,9 +11,9 @@
 
     <!-- Custom -->
     <meta name="viewport" content="initial-scale=1">
-    <link rel="stylesheet" href="{{ url_for("static", filename="style.css") }}?{{ range(1, 51) | random }}">
+    <link rel="stylesheet" href="{{ url_for("static", filename="style.css") }}?{{ range(1, 99999) | random }}">
     <link rel="stylesheet" href="{{ url_for("static", filename="proxima-nova.css") }}">
-    <script src="{{ url_for("static", filename="script.js") }}?{{ range(1, 51) | random }}"></script>
+    <script src="{{ url_for("static", filename="script.js") }}?{{ range(1, 99999) | random }}"></script>
     {% block head %}
     {% endblock %}
 </head>
