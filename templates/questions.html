@@ -26,8 +26,7 @@
 				<span style="float:left;position:relative;">
 					{% if qn.answers[0]|length <= 80 %}
 					{{ qn.answers[0] }}
-					{% endif %}
-					{% if qn.answers[0]|length > 80 %}
+					{% else %}
 					{{ qn.answers[0][:78] }}...
 					{% endif %}
 				</span>
@@ -36,8 +35,7 @@
 				<div style="float:left;color:grey;">
 				{% if qn.answers|length == 1 %}
 				<i>1 Answer</i></div>
-				{% endif %}
-				{% if qn.answers|length > 1 %}
+				{% else %}
 				<i> {{ qn.answers|length }} Answers</i></div>
 				{% endif %}
 			</div>

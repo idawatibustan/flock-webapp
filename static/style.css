@@ -49,7 +49,6 @@ nav.ui.compact.menu,
 nav .simple.dropdown.item,
 nav .simple.dropdown.item .menu,
 nav .simple.dropdown.item .menu a.item {
-    background: #0abe50;
     color: #fff !important;
     border: none;
     font-weight: bold;
