@@ -10,7 +10,7 @@ def get_questions(params=None):
     questions = [v for v in questions.values()]
     questions = sorted(questions, key=lambda x: x['rank'], reverse=True)
     if not questions:
-        return None
+        return [[]]
     return questions
 
 def process_query(query):
