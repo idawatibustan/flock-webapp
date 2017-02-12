@@ -4,6 +4,8 @@ from pprint import pprint
 from settings import *
 from helper import *
 from fuzzywuzzy import fuzz
+from time_generator import generate_time
+from name_generator import generate_name
 import requests
 import os
 import uuid
@@ -60,7 +62,7 @@ def question_detail():
         else:
             params = { 'q_id': q_id }
             question = get_questions(params)[0]
-            return render_template('question_detail.html', data=question)
+            return render_template('question_detail.html', data=question, generate_time=generate_time, generate_name=generate_name)
     elif request.method == 'POST':
         data = json.loads(request.data)
         pprint(data)
