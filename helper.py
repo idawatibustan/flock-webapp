@@ -1,11 +1,13 @@
+import json
+
 def get_questions(params=None):
     # takes in asker_id, q_id, and is_answered as param keys
     questions = json.loads(open('json/questions.json').read())
     if params:
         for param, val in params.iteritems():
-            questions = [question for question in questions if question[param] == val]
-        sophisticated_sort(res)
-        questions = sorted(questions, key=lambda x: x['rank'], reverse=True)
+            questions = { q_id: obj for q_id, obj in questions.iteritems() if obj[param] == val }
+    questions = [v for v in questions.values()]
+    questions = sorted(questions, key=lambda x: x['rank'], reverse=True)
     return questions
 
 def process_query(query):
@@ -55,7 +57,8 @@ def process_query(query):
     }
     return results
 
-def save_question(q_obj, q_id = None):
+def save_question(q_obj):
     questions = json.loads(open('json/questions.json').read())
+    q_id = q_obj['q_id']
     questions[q_id] = q_obj
     open('json/questions.json', 'w').write(json.dumps(questions, indent=4))

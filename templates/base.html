@@ -11,13 +11,14 @@
 
     <!-- Custom -->
     <meta name="viewport" content="initial-scale=1">
-    <link rel="stylesheet" href="{{ url_for("static", filename="style.css") }}?{{ range(1, 51) | random }}">
+    <link rel="stylesheet" href="{{ url_for("static", filename="style.css") }}?{{ range(1, 99999) | random }}">
     <link rel="stylesheet" href="{{ url_for("static", filename="proxima-nova.css") }}">
-    <script src="{{ url_for("static", filename="script.js") }}?{{ range(1, 51) | random }}"></script>
+    <script src="{{ url_for("static", filename="script.js") }}?{{ range(1, 99999) | random }}"></script>
     {% block head %}
     {% endblock %}
 </head>
 <body>
+    <section class="nav_container">
     <nav class="ui compact menu">
       <div class="ui simple dropdown item">
         {% if active_page == "questions" %}
@@ -42,6 +43,7 @@
       </div>
       <div class="results"></div>
     </div>
+    </section>
     <section class="content">
         {% block body %}
         {% endblock %}
