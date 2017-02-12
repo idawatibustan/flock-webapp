@@ -132,12 +132,10 @@ class Powersearch:
                         {
                           "title": "Result Title",
                           "url": "/optional/url/on/click",
-                          "image": "optional-image.jpg",
-                          "price": "Optional Price",
                           "description": "Optional Description"
                         }
                     ]
-                }
+                },
             }
         }
         return result
