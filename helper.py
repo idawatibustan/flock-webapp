@@ -9,8 +9,6 @@ def get_questions(params=None):
             questions = { q_id: obj for q_id, obj in questions.iteritems() if obj[param] == val }
     questions = [v for v in questions.values()]
     questions = sorted(questions, key=lambda x: x['rank'], reverse=True)
-    if not questions:
-        return [[]]
     return questions
 
 def process_query(query):

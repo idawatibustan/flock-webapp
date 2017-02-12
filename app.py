@@ -36,8 +36,8 @@ def question_detail():
     if request.method == 'GET':
         q_id = dict(request.args)['id'][0]
         params = { 'q_id': q_id }
-        question = get_questions(params)
-        return render_template('question_detail.html', data=question[0])
+        question = get_questions(params)[0]
+        return render_template('question_detail.html', data=question)
     elif request.method == 'POST':
         data = json.loads(request.data)
         pprint(data)
@@ -61,19 +61,19 @@ def question_detail():
 @app.route("/answer_detail", methods=['GET', 'POST'])
 def answer_detail():
     if request.method == 'GET':
-        params = { 'q_id': dict(request.args)['id'][0] }
-        question = get_questions(params)[0]
+        params = { 'q_id': request.args['id'] }
+        question = get_questions(params)
         return render_template("answer_detail.html", data=question)
     elif request.method == 'POST':
-        data = json.loads(request.data)
-        q_id, body = data['id'], data['body']
+        answer = request.form['answer']
+        q_id, body = request.args['id'], answer
         params = { 'q_id': q_id }
-        question = get_questions(params)
+        question = get_questions(params)[0]
         question['answers'] += [body]
         question['is_answered'] = True
-        save_question(question, q_id)
-        # return redirect(url_for('answers'))
-        return render_template("answers.html")
+        save_question(question)
+        return redirect(url_for("answers"))
+        # return render_template("answers.html")
 
 @app.route("/search")
 def search():
