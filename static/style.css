@@ -2,6 +2,10 @@ html {
     font-family: "Proxima Nova", "Arial", sans-serif;
 }
 
+body {
+    min-width: 0!important;
+}
+
 .ui.segment {
 	width: 100%;
 }
@@ -11,12 +15,20 @@ html {
 	width: 100%;
 }
 
+section h1 {
+    padding: 0 10px;
+}
+
 h3 {
 	display: inline;
 }
 
 span {
 	display: inline;
+}
+
+a, a:hover {
+	color:black;
 }
 
 nav.ui.compact.menu,
@@ -36,17 +48,37 @@ nav .simple.dropdown.item .menu a.item {
 
 .ui.search .prompt {
     border-radius: 0;
-    width: 218px;
+    width: 216px;
 }
 
 section.nav_container {
-    padding: 10px;
+    height: 60px;
 }
 
 section.nav_container > * {
-    display: inline-block;
+    display: block;
+    position: absolute;
+}
+
+section.nav_container > nav {
+    left: 10px;
+    top: 10px;
 }
 
 section.nav_container > div.ui.category.search {
-    margin-left: -4px;
+    left: 72px;
+    top: 9px;
+}
+
+div.results {
+    left: -65px !important;
+    width: 283px !important;
+}
+
+div.results .name {
+    width: 80px !important;
+}
+
+div.results .result {
+    margin-left: 80px !important;
 }

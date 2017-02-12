@@ -4,55 +4,70 @@
 {% endblock %}
 {% block body %}
 <div class="ui segments">
-	<div class="ui segment">
-		<div class="content">
-			<div style="float:left;"><h3>
-				How do I submit vacation times?
-			</h3></div>
-			<div style="float:right;"><i>2hr ago</i></div>
-			
-			<br />
-			<br />
-			<div style="float:left;">5 Answers</div>
-			
-		</div>
-	</div>
+	<a href="{{ url_for("question_detail") }}">
+		<div class="ui segment">
+			<div class="content">
+				<div style="float:left;"><h3>
+					How do I submit vacation times?
+				</h3></div>
+				<div style="float:right;"><i>2hr ago</i></div>
 
-	<div class="ui segment">
-		<div class="content">
-			<div style="float:left;"><h3>
-				How do I check when my supervisors are in?
-			</h3></div>
-			<div style="float:right;"><i>1d ago</i></div>
-			<br />
-			<br />
-			<div style="float:left;">3 Answers</div>
+				<br />
+				<br />
+				<span style="float:left;">You have to submit the appropriate paperwork to HR...</span>
+				<br />
+				<div style="float:left;color:grey;"><i>2 more answers</i></div>
+			</div>
 		</div>
-	</div>
+	</a>
 
-	<div class="ui segment">
-		<div class="content">
-			<div style="float:left;"><h3>
-				What happened with ants in 2k15??
-			</h3></div>
-			<div style="float:right;"><i>1d ago</i></div>
-			<br />
-			<br />
-			<div style="float:left;">67 Answers</div>
+	<a href="{{ url_for("question_detail") }}">
+		<div class="ui segment">
+			<div class="content">
+				<div style="float:left;"><h3>
+					How do I check when my supervisors are in?
+				</h3></div>
+				<div style="float:right;"><i>1d ago</i></div>
+				<br />
+				<br />
+				<span style="float:left;">There should be a schedule posted on every cubicle...</span>
+				<br />
+				<div style="float:left;color:grey;"><i>4 more answers</i></div>
+			</div>
 		</div>
-	</div>
+	</a>
 
-	<div class="ui segment">
-		<div class="content">
-			<div style="float:left;"><h3>
-				Who took my sandwich
-			</h3></div>
-			<div style="float:right;"><i>1d ago</i></div>
-			<br />
-			<br />
-			<div style="float:left;">1 Answer</div>
+	<a href="{{ url_for("question_detail") }}">
+		<div class="ui segment">
+			<div class="content">
+				<div style="float:left;"><h3>
+					What happened with ants in 2015??
+				</h3></div>
+				<div style="float:right;"><i>3d ago</i></div>
+				<br />
+				<br />
+				<span style="float:left;">God fucking damn it Jerry you we don't talk about ...</span>
+				<br />
+				<div style="float:left;color:grey;"><i>67 more answers</i></div>
+			</div>
 		</div>
-	</div>
+	</a>
+
+	<a href="{{ url_for("question_detail") }}">
+		<div class="ui segment">
+			<div class="content">
+				<div style="float:left;"><h3>
+					Who took my sandwich
+				</h3></div>
+				<div style="float:right;"><i>1w ago</i></div>
+				<br />
+				<br />
+				<span style="float:left;">It was me.</span>
+				<br />
+				<div style="float:left;color:grey;"><i>No more answers</i></div>
+			</div>
+		</div>
+	</a>
 
 </div>
 {% endblock %}
