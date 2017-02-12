@@ -61,8 +61,6 @@ def question_detail():
 @app.route("/answer_detail", methods=['GET', 'POST'])
 def answer_detail():
     if request.method == 'GET':
-        # params = { 'q_id': request.args['id'][0] }
-        # q_id = dict(request.args)['id'][0]
         params = { 'q_id': dict(request.args)['id'][0] }
         question = get_questions(params)[0]
         return render_template("answer_detail.html", data=question)

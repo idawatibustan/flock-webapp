@@ -1,50 +1,56 @@
 <head>
-    <title>floQdoc</title>
+	<title>floQdoc</title>
 
-    <!-- Semantic UI -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/dropdown.min.js"></script>
+	<!-- Semantic UI -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/dropdown.min.js"></script>
 
-    <!-- Custom -->
-    <meta name="viewport" content="initial-scale=1">
-    <link rel="stylesheet" href="{{ url_for("static", filename="style.css") }}">
-    <link rel="stylesheet" href="{{ url_for("static", filename="proxima-nova.css") }}">
-    <script src="{{ url_for("static", filename="script.js") }}"></script>
+	<!-- Custom -->
+	<meta name="viewport" content="initial-scale=1">
+	<link rel="stylesheet" href="{{ url_for("static", filename="style.css") }}">
+	<link rel="stylesheet" href="{{ url_for("static", filename="proxima-nova.css") }}">
+	<script src="{{ url_for("static", filename="script.js") }}"></script>
 </head>
 
 <body>
 
-<div class="ui secondary basic menu">
-    <a class="item" href="{{ url_for("answers") }}">
-        <i class="reply icon"></i>
-        Back
-    </a>
-</div>
+	<div class="ui secondary basic menu">
+		<a class="item" href="{{ url_for("answers") }}">
+			<i class="reply icon"></i>
+			Back
+		</a>
+	</div>
 
-<div class="ui form">
-	<h2>{{ data.question_title }}</h1>
-	<div class="field">
-		<div class="ui multiple selection simple dropdown" id="multi-select">
-			<input type="hidden" name="tag">
-			<i class="dropdown icon"></i>
-			<div class="default text">Enter tags here</div>
-			<div class="menu">
-				<div class="item" data-value="HR">Human Resources</div>
-				<div class="item" data-value="ENG">Engineering</div>
-				<div class="item" data-value="MAR">Marketing</div>
-				<div class="item" data-value="MIS">Miscellaneous</div>
+	<div class="ui form">
+		<div style="padding-left:10px">
+			<h2>{{ data.question_title }}</h1>
+		</div>
+		<div class="field">
+			<div class="ui multiple selection simple dropdown" id="multi-select">
+				<input type="hidden" name="tag">
+				<i class="dropdown icon"></i>
+				<div class="default text">Enter tags here</div>
+				<div class="menu">
+					<div class="item" data-value="HR">Human Resources</div>
+					<div class="item" data-value="ENG">Engineering</div>
+					<div class="item" data-value="MAR">Marketing</div>
+					<div class="item" data-value="MIS">Miscellaneous</div>
+				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="field">
-		<label>Your answer:</label>
-		<textarea rows="20" cols="60"></textarea>
-	</div>
+		<div class="field">
+			<label>
+				<div style="padding-left:10px">
+					Your answer:
+				</div>
+			</label>
+			<textarea rows="20" cols="60"></textarea>
+		</div>
 
-	<div class="ui right floated green button">Answer</div>
-	<div class="ui right floated grey button">Forward</div>
-</div>
+		<div class="ui right floated green button">Answer</div>
+		<div class="ui right floated grey button">Forward</div>
+	</div>
 </body>
